@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disgital Clock || JavaScript</title>
+    <link rel="stylesheet" href="css/mainstyle.css">
+</head>
+<body>
+    
+    <div class="clock">
+        <div class="display"></div>
+    </div>
+
+
+    <script src="js/app.js"></script>
+    <script>
+        setInterval(function(){
+            const clock = document.querySelector(".display");
+            let time = new Date();
+            let hr = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+            let day = 'AM';
+            
+            if(hr > 12){
+                hr = hr - 12;
+                day = 'PM';
+                if(hr < 10){hr = "0" + hr;}
+            }
+
+            if(hr == 0){hr = 12;}
+            if(min < 10){min = "0" + min;}
+            if(sec < 10){sec = "0" + sec;}
+            clock.textContent = hr + " : " + min + " : " + sec + " " + day;
+        });
+    </script>
+</body>
+</html>
