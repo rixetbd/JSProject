@@ -1,9 +1,9 @@
 ## JavaScript Projects List
 
-#### 🏅 DigiClock ⌚ A Digital Clock [Live Preview 👁‍🗨](https://rixetbd.github.io/JSProject/digital-clock/index.html)
+#### 🏅 DigiClock ⌚ A Digital Clock [Live Preview 👁‍🗨](https://rixetbd.github.io/JSProject/Digital_Clock/index.html)
 ![Logo](https://i.ibb.co/N35cC7r/Digi-Clock.png)
 
-#### 🏅 DigiClock ⌚ A Digital Clock [Live Preview 👁‍🗨](https://rixetbd.github.io/JSProject/digital-clock/index.html)
+#### 🏅 DigiClock ⌚ A Digital Clock [Live Preview 👁‍🗨](https://rixetbd.github.io/JSProject/Digital_Clock/index.html)
 ![Logo](https://i.ibb.co/N35cC7r/Digi-Clock.png)
 
 
