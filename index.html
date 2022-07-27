@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>JS Project - Vision 2022</title>
+    <title>JavaScript || Vision 2022</title>
 
     <link href="https://avatars.githubusercontent.com/u/72306656?s=400&u=cc0eb5bc0d52e1df9f7a5590d1efd99d938209b7&v=4" rel=icon>
 
@@ -15,6 +15,12 @@
     <link href="lib/css/mainstyle.css" rel="stylesheet">
 
     <meta name="robots" content="noindex, nofollow">
+
+    <style>
+        .liveView ::-webkit-scrollbar{
+            width: 0;
+        }
+    </style>
 
 </head>
 
@@ -82,7 +88,7 @@
             </div>
         </header>
 
-        <section class="section-wrapper portfolio-section">
+        <!-- <section class="section-wrapper portfolio-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
@@ -107,12 +113,12 @@
                             </div>
                             <div class="col-md-4 col-sm-6">
                                 <a class="portfolio-item"
-                                    href="https://rixetbd.github.io/JSProject/Digital_Clock/index.html" target="_blank">
+                                    href="https://rixetbd.github.io/JSProject/Analog_Clock/index.html" target="_blank">
                                     <div class="portfolio-thumb">
                                         <img src="lib/img/portfolio-1.jpg" alt="">
                                     </div>
                                     <div class="portfolio-info">
-                                        <h3>Digital Clock</h3>
+                                        <h3>Analog Clock</h3>
                                         <small>Live Preview</small>
                                     </div>
 
@@ -135,9 +141,24 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-        </section>
+        </section> -->
+
+        <section class="section-wrapper portfolio-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                        <iframe class="liveView" src="./Digital_Clock/index.html" frameborder="0" height="250px" style="width: 100%;"></iframe>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <iframe class="liveView" src="https://dev-rong.pantheonsite.io/" frameborder="0" width="100%" height="250px"></iframe>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <iframe class="liveView" src="./Analog_Clock/index.html" frameborder="0" width="100%" height="250px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="js/jquery-2.1.4.min.js"></script>
