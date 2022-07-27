@@ -10,10 +10,10 @@ This is a litte JavaScript Project.
 
 ### Live Preview
 
-Copy link from below or click here [Click Here](https://rixetbd.github.io/JSProject/digital-clock/index.html)
+Copy link from below or click here [Click Here](https://rixetbd.github.io/JSProject/Digital_Clock/index.html)
 
 ```bash
-  https://rixetbd.github.io/JSProject/digital-clock/index.html
+  https://rixetbd.github.io/JSProject/Digital_Clock/index.html
 ```
 
 ### Feedback
