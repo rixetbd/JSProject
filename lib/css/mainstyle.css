@@ -1,3 +1,313 @@
-a{
+/*------------------------------------------------------------------
+# [Color codes]
+
+# Body  (text): #3a4750
+# Heading Color #444444
+# Theme Color (link color) #ff5722
+# Mid grey (sub header) #f4f4f4
+# -------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+::-webkit-scrollbar {width: 0;}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.8em;
+    color: #989898;
+    font-weight: 300;
+    background: #f8f8f8;
+}
+
+/* --------------------------------------
+ * Global Typography
+ *------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    color: #444444;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 1.8em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 1.8em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 13px;
+    line-height: 1.8em;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 15px;
+    line-height: 1.8em;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 15px;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 15px;
+    line-height: 1.5em;
+}
+
+/* --------------------------------------
+ * LINK STYLE
+ *------------------------------------------*/
+a {
+    color: #ff5722;
     text-decoration: none;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+a,
+a:active,
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: none
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #ff5722;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+strong {
+    color: #444444;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* --------------------
+ *  main Wrapper
+ * -------------------*/
+#main-wrapper {
+    overflow: hidden;
+}
+
+/*-------------------
+ * Section Wrapper
+ *-------------------*/
+.section-wrapper {
+    padding-top: 25px;
+}
+
+@media (max-width : 768px) {
+    .section-wrapper {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width : 600px) {
+    .section-wrapper {
+        padding: 20px;
+    }
+}
+
+/*---------------------------
+ * Section Title
+ *---------------------------*/
+.section-title {
+    margin-right: 30px;
+    text-align: right;
+}
+
+.section-title h2 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        text-align: left;
+    }
+
+    .section-title h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
+
+/*-----------------------------
+ * NAVIGATION & HEADER STYLE
+ *-----------------------------*/
+
+.header {
+    padding: 50px 0;
+    margin: 0;
+    position: relative;
+}
+
+.header .profile-img {
+    margin-right: 30px;
+}
+
+.header .name-wrapper {
+    margin-bottom: 30px;
+}
+
+.header .name-wrapper h1 {
+    line-height: 1;
+    margin: 0 0 5px;
+}
+
+.header .name-wrapper span {
+    font-size: 24px;
+    color: #ff5722;
+}
+
+.header .personal-details {
+    margin: 10px 0;
+}
+
+.header .personal-details strong {
+    font-size: 14px;
+    color : #444444;
+    display: block;
+    line-height: 1;
+}
+
+.header .personal-details small {
+    font-size: 13px;
+    color : #444444;
+}
+
+@media (max-width : 768px) {
+    .header {
+        padding: 20px 0;
+    }
+
+    .header .profile-img {
+        margin: 0 0 30px;
+    }
+}
+
+@media (max-width : 600px) {
+    .header {
+        padding: 20px;
+    }
+}
+
+
+/*-------------------
+     * Social Icon
+     *-------------------*/
+
+.social-icon {
+    margin: 20px 0;
+    padding: 0;
+    display: block;
+}
+
+.social-icon li {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.social-icon li a {
+    display: block;
+    font-size: 12px;
+    color: #333333;
+    width: 34px;
+    height: 34px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 2px;
+    border: 2px solid #eeeeee;
+}
+
+.social-icon li a:hover {
+    color: #ff9100;
+    border-color: #ff9100;
+}
+
+
+/*-------------------
+ * Portfolio
+ *-------------------*/
+
+.portfolio-item {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.portfolio-item .portfolio-thumb img {
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.portfolio-item .portfolio-info {
+    position: absolute;
+    padding: 15px 15px 5px;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    background: -webkit-linear-gradient(top,
+            transparent 0%,
+            rgba(0, 0, 0, 0.5) 100%);
+}
+
+.portfolio-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: -webkit-linear-gradient(top,
+            transparent 0%,
+            #000 100%);
+    transition: all .2s linear;
+}
+
+.portfolio-item:hover::after {
+    top: 0;
+}
+
+.portfolio-item .portfolio-info h3 {
+    margin: 0;
+    line-height: 1;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.portfolio-item .portfolio-info small {
+    color: rgba(255, 255, 255, .5);
+}
+
+.description {
+    text-align: justify;
+    color: #000;
+    font-weight: 400;
 }
