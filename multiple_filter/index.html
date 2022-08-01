@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disgital Clock || JavaScript</title>
+    <title>Multiple Filter || JavaScript</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/mainstyle.css">
 </head>
@@ -19,25 +19,28 @@
             <div class="row" id="country_Name_ID"></div>
         </section>
 
-        <section class="state mt-5">
+        <!-- <section class="state mt-5">
             <h2 class="text-center mb-3">Region Name</h2>
             <div class="row" id="state_Name_ID"></div>
-        </section>
+        </section> -->
 
-        <section class="industry mt-5">
+        <section class="industry mt-5 d-none" id="industry">
             <h2 class="text-center mb-3">Industry Name</h2>
             <div class="row" id="industry_Name_ID"></div>
         </section>
 
 
-        <br>
-        <br>
-        <br>
+        <button id="submit" class="btn btn-success disabled">Filter</button>
+        <button id="reset" class="btn btn-success">Reset</button>
 
-        <table class="table" id="tablepress-Canada_Cannabist_wrapper">
+        <br>
+        <br>
+        <div id="data"></div>
+
+        <table class="table d-none" id="tablepress-Canada_CANNABIST_wrapper">
             <thead>
                 <tr>
-                    <th>tablepress-Canada_Cannabist_wrapper</th>
+                    <th>tablepress-Canada_CANNABIST_wrapper</th>
                     <th>Class</th>
                     <th>Roll No</th>
                     <th>Section</th>
@@ -52,10 +55,10 @@
                 </tr>
             </tbody>
         </table>
-        <table class="table" id="tablepress-Canada_Chriopractor_wrapper">
+        <table class="table d-none" id="tablepress-France_CANNABIST_wrapper">
             <thead>
                 <tr>
-                    <th>tablepress-Canada_Chriopractor_wrapper</th>
+                    <th>tablepress-France_CANNABIST_wrapper</th>
                     <th>Class</th>
                     <th>Roll No</th>
                     <th>Section</th>
@@ -70,7 +73,7 @@
                 </tr>
             </tbody>
         </table>
-        <table class="table" id="tablepress-Canada_Dental_wrapper">
+        <table class="table d-none" id="tablepress-Canada_Dental_wrapper">
             <thead>
                 <tr>
                     <th>tablepress-Canada_Dental_wrapper</th>
@@ -88,7 +91,7 @@
                 </tr>
             </tbody>
         </table>
-        <table class="table" id="tablepress-Canada_eCommerce_wrapper">
+        <table class="table d-none" id="tablepress-Canada_eCommerce_wrapper">
             <thead>
                 <tr>
                     <th>tablepress-Canada_eCommerce_wrapper</th>
@@ -106,7 +109,7 @@
                 </tr>
             </tbody>
         </table>
-        <table class="table" id="tablepress-Canada_HVAC_wrapper">
+        <table class="table d-none" id="tablepress-Canada_HVAC_wrapper">
             <thead>
                 <tr>
                     <th>tablepress-Canada_HVAC_wrapper</th>
@@ -124,7 +127,7 @@
                 </tr>
             </tbody>
         </table>
-        <table class="table" id="tablepress-Canada_Law_wrapper">
+        <table class="table d-none" id="tablepress-Canada_Law_wrapper">
             <thead>
                 <tr>
                     <th>tablepress-Canada_Law_wrapper</th>
@@ -143,13 +146,14 @@
             </tbody>
         </table>
 
-        <button class="btn btn-light float-right" id="downloadButton">Download</button>
+        <!-- <button class="btn btn-light float-right" id="downloadButton">Download</button> -->
 
     </div>
 
 
 
 
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/app.js"></script>
 
 </body>

@@ -33,5 +33,11 @@ html,body{font-family: 'Poppins', sans-serif;}
 .state_box,
 .industry_box{
     height: 100px;
-    font-size: 20px;
+    font-size: 14px;
+}
+
+.tomato_code{
+    border: none;
+    color: #fff;
+    background-color: #FF6347;
 }
