@@ -21,7 +21,7 @@ html,body{font-family: 'Poppins', sans-serif;}
 .country_box:hover,
 .state_box:hover,
 .industry_box:hover{
-    background-color: tomato;
+    background-color: #007e73b0;
     border: none;
     color: #fff;
 }
@@ -39,5 +39,5 @@ html,body{font-family: 'Poppins', sans-serif;}
 .tomato_code{
     border: none;
     color: #fff;
-    background-color: #FF6347;
+    background-color: #007E74;
 }
