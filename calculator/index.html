@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" content="Calculator || RixetBD">
+    <meta name="description" content="A simple Calculator using JavaScript.">
+    <meta name="keywords" content="Calculator, JavaScript,rixetbd,web">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="https://github.com/rixetbd">
+
+    <meta property="og:title" content="Calculator || RixetBD" />
+    <meta property="og:url" content="https://github.com/rixetbd/calculator" />
+    <meta property="og:image" content="https://i.ibb.co/kKHCgGJ/calculator-rixetbd.png" />
+    <meta name="twitter:image" content="https://i.ibb.co/kKHCgGJ/calculator-rixetbd.png" />
+    <meta itemprop="image" content="https://i.ibb.co/kKHCgGJ/calculator-rixetbd.png">
+
+    <title>Calculator || RixetBD</title>
+    <link rel="shortcut icon" href="calculator.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="mainBody" class="body_dark">
+
+        <div class="calculator_body">
+            <div class="d-flex align_items_center justify_content_between">
+                <div class="d-flex">
+                    <div>
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <div>
+                        <h2>Calculator</h2>
+                        <p class="footer">Created By <a href="#" target="_blank">RixetBD</a></p>
+                    </div>
+                </div>
+                <div style="float: right;" id="bgColor">
+                    <i class="fa-solid fa-sun"></i>
+                </div>
+            </div>
+            <div class="display">
+                <div id="result"></div>
+                <div id="calculation">0</div>
+            </div>
+
+            <table border="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td id="clear">C</td>
+                        <td onclick="input('&#40;')">&#40;</td>
+                        <td onclick="input('&#41;')">&#41;</td>
+                        <td id="deleteOne"><i class="fa-solid fa-delete-left"></i></td>
+                    <!-- </tr>
+                    <tr>
+                        <td onclick="input('&#94;')">X<sup>2</sup></td>
+                        <td onclick="input('%')">%</td>
+                        <td onclick="input('&radic;')" id="squareRoot"><i class="fa-solid fa-square-root-variable"></i></td> -->
+                    </tr>
+                    <tr>
+                        <td onclick="input('7')">7</td>
+                        <td onclick="input('8')">8</td>
+                        <td onclick="input('9')">9</td>
+                        <td onclick="input('/')" id="divide"><i class="fa-solid fa-divide"></i></td>
+                    </tr>
+                    <tr>
+                        <td onclick="input('4')">4</td>
+                        <td onclick="input('5')">5</td>
+                        <td onclick="input('6')">6</td>
+                        <td onclick="input('*')" id="multiple"><i class="fa-solid fa-xmark"></i></td>
+                    </tr>
+                    <tr>
+                        <td onclick="input('1')">1</td>
+                        <td onclick="input('2')">2</td>
+                        <td onclick="input('3')">3</td>
+                        <td onclick="input('-')" id="minus"><i class="fa-solid fa-minus"></i></td>
+                    </tr>
+                    <tr>
+                        <td onclick="input('00')">00</td>
+                        <td onclick="input('0')">0</td>
+                        <td onclick="input('.')">&#9679;</td>
+                        <td onclick="input('+')" id="plus"><i class="fa-solid fa-plus"></i></td>
+                        <td id="equal" style="display: none;"><i class="fa-solid fa-equals"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    <script src="function.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
