@@ -60,3 +60,7 @@ html,body{font-family: 'Poppins', sans-serif;}
 .industry_box_overly:hover{
     color: #ffffffcb;
 }
+
+#myTable{
+    font-size: 13px;
+}

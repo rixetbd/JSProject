@@ -1,6 +1,6 @@
 let countryNames = ['Canada', 'France', 'Germany', 'USA'];
 // let stateNames = ['ALBERTA','BRITISH COLUMBIA','MANITOBA','NEW BRUNSWICK','NEWFOUNDLAND AND LABRADOR','NORTHWEST TERRITORIES','NOVA SCOTIA','NUNAVUT','ONTARIO','PRINCE EDWARD ISLAND','QUEBEC','SASKATCHEWAN','YUKON'];
-let industryNames = ['CANNABIST', 'CHRIOPRACTOR', 'DENTAL', 'E-COMMERCE', 'FOOTBALL CLUB', 'HVAC', 'LAW FIRM', 'OPTOMETRY', 'PHYSIOTHERAPY', 'PLASTIC SURGEONS', 'REAL ESTATE', 'SPORTS MEDICINE', 'VETERINARIANS'];
+let industryNames = ['CANNABIST', 'CHRIOPRACTOR', 'DENTAL', 'E-COMMERCE', 'FOOTBALL CLUB', 'HVAC', 'LAW FIRM', 'OPTOMETRY', 'PHYSIOTHERAPY', 'PLASTIC SURGEONS', 'REAL ESTATE', 'VETERINARIANS'];
 
 
 let country_Name_ID = document.getElementById('country_Name_ID');
@@ -66,6 +66,10 @@ $("#industry_Name_ID div div div").click(function (event) {
 
     let idAct = document.getElementById(industry); 
     idAct.style.backgroundColor = "rgb(0 0 0 / 11%)";
+
+
+    $('#myTable_filter input').val(industry).keyup();
+
 });
 
 $('#submit').click(function(){
@@ -120,6 +124,7 @@ $('#reset').click(function(){
     $('.country_box').removeClass('tomato_code');
     $('.industry_box').removeClass('tomato_code');
     localStorage.clear();
+    $('#myTable_filter input').val("").clear();
 });
 
 setInterval(function(){
