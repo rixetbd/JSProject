@@ -124,7 +124,7 @@ $('#reset').click(function(){
     $('.country_box').removeClass('tomato_code');
     $('.industry_box').removeClass('tomato_code');
     localStorage.clear();
-    $('#myTable_filter input').val("").clear();
+    $('#myTable_filter input').val("").keyup();
 });
 
 setInterval(function(){
