@@ -1,4 +1,4 @@
-![Logo](https://i.ibb.co/kKHCgGJ/calculator-rixetbd.png)
+![Logo](https://i.ibb.co/R2rXkd9/calculator.png)
 
 ## Calculator 🖩
 
