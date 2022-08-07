@@ -235,7 +235,7 @@ ul {
 
 .social-icon li a {
     display: block;
-    font-size: 12px;
+    font-size: 18px;
     color: #333333;
     width: 34px;
     height: 34px;
@@ -310,4 +310,11 @@ ul {
     text-align: justify;
     color: #000;
     font-weight: 400;
+}
+
+#thanks{
+    cursor: pointer;
+    color: #333333;
+    font-size: 16px;
+    margin-top: -5px;
 }

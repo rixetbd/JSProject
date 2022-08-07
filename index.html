@@ -11,7 +11,7 @@
     <link href="https://avatars.githubusercontent.com/u/72306656?s=400&u=cc0eb5bc0d52e1df9f7a5590d1efd99d938209b7&v=4"
         rel=icon>
 
-    <link href="lib/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
     <link href="lib/css/bootstrap.min.css" rel="stylesheet">
     <link href="lib/css/mainstyle.css" rel="stylesheet">
 
@@ -36,17 +36,16 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="profile-img">
-                            <img src="https://avatars.githubusercontent.com/u/72306656?s=400&u=cc0eb5bc0d52e1df9f7a5590d1efd99d938209b7&v=4"
-                                class="img-fluid" alt="rixetbd" style="border-radius: 50%;" />
+                            <img id="profilePic" src="./lib/users/rixetbd0.png" class="img-fluid" alt="rixetbd" style="border-radius: 50%;" />
                         </div>
                     </div>
 
                     <div class="col-md-9">
                         <div class="name-wrapper">
-                            <h1 class="name">Rabiul Islam</h1>
+                            <h1 class="name">Muhammad Rabiul <span id="thanks"><i class="fa-solid fa-volume-high"></i></span></h1>
                             <span>Full Stack Developer</span>
                         </div>
-                        <p class="description">
+                        <p class="description" id="description">
                             I’m a Full Stack Developer who is passionate about making error-free websites with 100%
                             client satisfaction. I have a passion for learning and sharing my knowledge with others as
                             publicly as possible. I love to solve real-world problems. I am strategic, goal-oriented,
@@ -77,14 +76,14 @@
                         </div>
                         <ul class="social-icon">
                             <li><a target="_blank" href="https://www.facebook.com/rixet.rabiul/"><i
-                                        class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a target="_blank" href="https://www.linkedin.com/in/rixetbd/"><i class="fa fa-linkedin"
+                                        class="fa-brands fa-square-facebook" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/in/rixetbd/"><i class="fa-brands fa-linkedin"
                                         aria-hidden="true"></i></a></li>
-                            <li><a target="_blank" href="https://twitter.com/rixetbd"><i class="fa fa-twitter"
+                            <li><a target="_blank" href="https://www.instagram.com/rixetbd/"><i class="fa-brands fa-instagram"
                                         aria-hidden="true"></i></a></li>
-                            <li><a target="_blank" href="https://www.instagram.com/rixetbd/"><i class="fa fa-instagram"
+                            <li><a target="_blank" href="https://wa.link/b0dyi1"><i class="fa-brands fa-whatsapp"
                                         aria-hidden="true"></i></a></li>
-                            <li><a target="_blank" href="https://wa.link/b0dyi1"><i class="fa fa-whatsapp"
+                            <li><a target="_blank" href="https://wa.link/b0dyi1"><i class="fa-brands fa-github"
                                         aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
@@ -209,15 +208,51 @@
             </div>
         </section>
 
+        <hr>
         <footer class="container">
-            <hr>
-            <p>Copyright &copy; <script>let date = new Date();document.write(date.getFullYear())</script>. Powered By <a href="https://github.com/rixetbd" target="_blank">RixetBD</a>.</p>
+            <div class="row">
+                <div class="col-6">
+                    <p>Copyright &copy; <script>let date = new Date();document.write(date.getFullYear())</script>. Powered By <a href="https://github.com/rixetbd" target="_blank">RixetBD</a>.</p>
+                </div>
+                <div class="col-6">
+                </div>
+            </div>    
         </footer>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/scripts.js"></script>
+
+    <script>
+        let thanks = document.getElementById('thanks');
+        let description = document.getElementById('description');
+        // let aboutText = "Hi, I'm Muhammad Rabiul";
+        let aboutText = "Hi, I'm Muhammad Rabiul" + description.innerText;
+        let utterance = new SpeechSynthesisUtterance(aboutText);
+        
+        thanks.addEventListener('click', function(){
+            speechSynthesis.speak(utterance);
+        })
+        
+        let profilePic = document.getElementById('profilePic');
+
+        // setInterval(() => {       
+            // for(i= 0; i < 3; i++){
+            //     setTimeout(function(){ 
+                    profilePic.setAttribute('src', `./lib/users/rixetbd0.png`);
+            //         console.log(`./lib/users/rixetbd${i}.png`)
+            //     }, 4000);
+            // }
+        // }, 2000);
+
+
+
+
+        
+
+    </script>
 </body>
 
 </html>
