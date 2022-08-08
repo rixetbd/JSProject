@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Converter || JavaScript</title>
+
+    <link rel="shortcut icon" href="img/case-change.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mainstyle.css">
+
+</head>
+
+<body>
+
+    <section class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="text-center col-md-8 col-sm-12">
+            <img src="img/case-change.png" alt="" style="width: 20%;">
+            <h2>Case Converter</h2>
+            <p class="mx-5">
+                A useful online tool called Case Converter lets you modify the text case of any provided text. Copy
+                and paste the text into the box below, then select the appropriate text case.
+            </p>
+            <textarea name="" id="textBox" class="p-4" style="height: 250px;width: 100%;"
+                placeholder="Type your text..."></textarea>
+            <div class="d-flex justify-content-between all_btn">
+                <div id="tOGGLEcASE" class="btn_div">tOGGLE cASE</div>
+                <div id="SentenceCase" class="btn_div">Sentence Case</div>
+                <div id="lowercase" class="btn_div">lower case</div>
+                <div id="UPPERCASE" class="btn_div">UPPER CASE</div>
+                <div id="CapitalizeWord" class="btn_div">Capitalize Word</div>
+                <div id="clearBtn" class="btn_div">Clear</div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js/app.js"></script>
+
+    <script>
+        let tOGGLEcASE = document.getElementById('tOGGLEcASE');
+        let SentenceCase = document.getElementById('SentenceCase');
+        let lowercase = document.getElementById('lowercase');
+        let UPPERCASE = document.getElementById('UPPERCASE');
+        let CapitalizeWord = document.getElementById('CapitalizeWord');
+        let clearBtn = document.getElementById('clearBtn');
+        let textBox = document.getElementById('textBox');
+
+        tOGGLEcASE.addEventListener('click', () => {
+            let usertext = textBox.value;
+            textBox.value = usertext.toUpperCase().split(" ")
+                .map((e) => e.charAt(0).toLowerCase() + e.substring(1))
+                .join(" ");
+        })
+
+        SentenceCase.addEventListener('click', () => {
+            let usertext = textBox.value;
+            textBox.value = usertext.split(". ").map((e) => e.charAt(0).toUpperCase() + e.substring(1)
+                    .toLowerCase())
+                .join(". ");
+        })
+
+        CapitalizeWord.addEventListener('click', () => {
+            let usertext = textBox.value;
+            textBox.value = usertext.toLowerCase().split(" ")
+                .map((e) => e.charAt(0).toUpperCase() + e.substring(1))
+                .join(" ");
+        })
+
+        lowercase.addEventListener('click', () => {
+            let usertext = textBox.value;
+            textBox.value = usertext.toLowerCase();
+        })
+
+        UPPERCASE.addEventListener('click', () => {
+            let usertext = textBox.value;
+            textBox.value = usertext.toUpperCase();
+        })
+
+        clearBtn.addEventListener('click', () => {
+            textBox.value = "";
+        })
+    </script>
+
+</body>
+
+</html>
