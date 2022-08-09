@@ -6,6 +6,9 @@
 #### 🏅 Calculator [Live Preview 👁‍🗨](https://rixetbd.github.io/JSProject/calculator/index.html)
 ![Logo](https://i.ibb.co/R2rXkd9/calculator.png)
 
+#### 🏅 Email Generator [Live Preview 👁‍🗨](https://rixetbd.github.io/JSProject/emailgen/index.html)
+![Logo](https://i.ibb.co/Lrz0tR1/rixetbd-github-io-emailgen.png)
+
 #### 🏅 DigiClock ⌚ A Digital Clock [Live Preview 👁‍🗨](https://rixetbd.github.io/JSProject/Digital_Clock/index.html)
 ![Logo](https://i.ibb.co/N35cC7r/Digi-Clock.png)
 
