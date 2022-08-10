@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+html,body{font-family: 'Poppins', sans-serif;}
+
+.country_box,
+.state_box,
+.industry_box{
+    cursor: pointer;
+    width: 100%;
+    /* border: 1px solid #000; */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    font-weight: 600;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* .country_box:hover,
+.state_box:hover,
+.industry_box:hover{
+    background-color: #007e73b0;
+    border: none;
+    color: #fff;
+} */
+
+.country_box{
+    height: 150px;
+    font-size: 30px;
+}
+.state_box,
+.industry_box{
+    height: 100px;
+    font-size: 16px;
+}
+
+.tomato_code{
+    border: none;
+    color: #fff;
+    background-color: #007E74;
+}
+
+
+.industry_box_overly{
+    color: #fff;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.industry_box_overly:hover{
+    color: #ffffffcb;
+}
+
+#myTable{
+    font-size: 13px;
+}

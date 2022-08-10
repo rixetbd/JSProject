@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Filter || JavaScript</title>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mainstyle.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <section class="country mt-5">
+            <h2 class="text-center mb-3">Country Name</h2>
+            <div class="row" id="country_Name_ID"></div>
+        </section>
+
+        <!-- <section class="state mt-5">
+            <h2 class="text-center mb-3">Region Name</h2>
+            <div class="row" id="state_Name_ID"></div>
+        </section> -->
+
+        <section class="industry mt-5 d-none" id="industry">
+            <h2 class="text-center mb-3">Industry Name</h2>
+            <div class="row" id="industry_Name_ID"></div>
+        </section>
+
+
+        <button id="submit" class="btn btn-success disabled">Filter</button>
+        <button id="reset" class="btn btn-success">Reset</button>
+
+        <br>
+        <br>
+        <!-- <div id="data"></div> -->
+
+        <table class="table d-none" id="tablepress-Canada_CANNA BIST_wrapper">
+            <thead>
+                <tr>
+                    <th>tablepress-Canada_CANNABIST_wrapper</th>
+                    <th>Class</th>
+                    <th>Roll No</th>
+                    <th>Section</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Robert Sen</td>
+                    <td>12th</td>
+                    <td>34</td>
+                    <td>A</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-2">
+                <h4>Filters</h4>
+
+                <div>
+                    <button class="btn btn-sm btn-outline-primary w-100 my-1">Name <input type="checkbox" name="Name" checked></button>
+                    <button class="btn btn-sm btn-outline-primary w-100 my-1">Title</button>
+                    <button class="btn btn-sm btn-outline-primary w-100 my-1">Eamil</button>
+                    <button class="btn btn-sm btn-outline-primary w-100 my-1">Phone</button>
+                    <button class="btn btn-sm btn-outline-primary w-100 my-1">Company</button>
+                    <button class="btn btn-sm btn-outline-primary w-100 my-1">Category</button>
+                    <button class="btn btn-sm btn-outline-primary w-100 my-1">City</button>
+                    <button class="btn btn-sm btn-outline-primary w-100 my-1">Website</button>
+
+
+
+                </div>
+            </div>
+            <div class="col-10">
+
+                <!-- Can't Touch Code -->
+
+                <table id="myTable" class="tablepress tablepress-id-Canada_all tableData dataTable no-footer table"
+                    role="grid" aria-describedby="tablepress-Canada_all_info">
+                    <thead>
+                        <tr class="row-1 odd" role="row">
+                            <th class="column-1 sorting" tabindex="0" aria-controls="tablepress-Canada_all" rowspan="1"
+                                colspan="1" aria-label="FULL NAME: activate to sort column ascending"
+                                style="width: 146.391px;">NAME</th>
+                            <th class="column-2 sorting" tabindex="0" aria-controls="tablepress-Canada_all" rowspan="1"
+                                colspan="1" aria-label="PERSON TITLE: activate to sort column ascending"
+                                style="width: 112.125px;">TITLE</th>
+                            <th class="column-3 sorting" tabindex="0" aria-controls="tablepress-Canada_all" rowspan="1"
+                                colspan="1" aria-label="EMAIL: activate to sort column ascending"
+                                style="width: 290.859px;">EMAIL</th>
+                            <th class="column-4 sorting" tabindex="0" aria-controls="tablepress-Canada_all" rowspan="1"
+                                colspan="1" aria-label="PHONE: activate to sort column ascending"
+                                style="width: 96.5938px;">PHONE</th>
+                            <th class="column-5 sorting" tabindex="0" aria-controls="tablepress-Canada_all" rowspan="1"
+                                colspan="1" aria-label="COMPANY NAME: activate to sort column ascending"
+                                style="width: 263.344px;">COMPANY</th>
+                            <th class="column-6 sorting" tabindex="0" aria-controls="tablepress-Canada_all" rowspan="1"
+                                colspan="1" aria-label="Category: activate to sort column ascending"
+                                style="width: 89.0625px;">Category</th>
+                            <th class="column-7 sorting" tabindex="0" aria-controls="tablepress-Canada_all" rowspan="1"
+                                colspan="1" aria-label="CITY: activate to sort column ascending"
+                                style="width: 78.7656px;">CITY</th>
+                            <th class="column-8 sorting" tabindex="0" aria-controls="tablepress-Canada_all" rowspan="1"
+                                colspan="1" aria-label="WEBSITE: activate to sort column ascending"
+                                style="width: 319.672px;">WEBSITE</th>
+                        </tr>
+                    </thead>
+                    <tbody class="row-hover">
+                        <tr class="row-2 even">
+                            <td class="column-1">William Sirdevan</td>
+                            <td class="column-2">Partner</td>
+                            <td class="column-3">wsirdevan@lawrences.com</td>
+                            <td class="column-4">+19054515058</td>
+                            <td class="column-5">Lawrences Lawyers</td>
+                            <td class="column-6">Law Firm</td>
+                            <td class="column-7">Brampton</td>
+                            <td class="column-8">http://www.lawrences.com/</td>
+                        </tr>
+                        <tr class="row-6 odd">
+                            <td class="column-1">Richard Wellenreiter</td>
+                            <td class="column-2">CEO</td>
+                            <td class="column-3">rwellenreiter@wellenreiter.ca</td>
+                            <td class="column-4">+19055254520</td>
+                            <td class="column-5">Wellenreiter &amp; Wellenreiter</td>
+                            <td class="column-6">Dental</td>
+                            <td class="column-7">Ontario</td>
+                            <td class="column-8">http://www.wellenreiter.ca/</td>
+                        </tr>
+                        <tr class="row-9 even">
+                            <td class="column-1">Patrick Bedard</td>
+                            <td class="column-2">Partner</td>
+                            <td class="column-3">jpbedard@bpavocats.com</td>
+                            <td class="column-4">+14186923336</td>
+                            <td class="column-5">Hugo Lafreniere</td>
+                            <td class="column-6">HVAC</td>
+                            <td class="column-7">Quebec</td>
+                            <td class="column-8">http://bpavocats.com/</td>
+                        </tr>
+                        <tr class="row-10 odd">
+                            <td class="column-1">Pascal Paradis</td>
+                            <td class="column-2">Director</td>
+                            <td class="column-3">pascal.paradis@asfcanada.ca</td>
+                            <td class="column-4">+14189072607</td>
+                            <td class="column-5">Avocats Sans Frontieres</td>
+                            <td class="column-6">OPTOMETRY</td>
+                            <td class="column-7">Qubec</td>
+                            <td class="column-8">https://www.asfcanada.ca/</td>
+                        </tr>
+                        <tr class="row-34 even">
+                            <td class="column-1">Gary Neinstein</td>
+                            <td class="column-2">Partner</td>
+                            <td class="column-3">gary@neinstein.com</td>
+                            <td class="column-4">+14169202214</td>
+                            <td class="column-5">Neinstein Personal Injur</td>
+                            <td class="column-6">REAL ESTATE</td>
+                            <td class="column-7">Toronto</td>
+                            <td class="column-8">https://neinstein.com/</td>
+                        </tr>
+                        <tr class="row-36 odd">
+                            <td class="column-1">Francois Doyon</td>
+                            <td class="column-2">Lawyer</td>
+                            <td class="column-3">fx@doyonavocats.ca</td>
+                            <td class="column-4">+14188091527</td>
+                            <td class="column-5">Doyon Avocats</td>
+                            <td class="column-6">Law Firm</td>
+                            <td class="column-7">Montreal</td>
+                            <td class="column-8">https://www.doyonavocats.ca/</td>
+                        </tr>
+                        <tr class="row-38 even">
+                            <td class="column-1">Doug Bryce</td>
+                            <td class="column-2">Partner</td>
+                            <td class="column-3">doug.bryce@siskinds.com</td>
+                            <td class="column-4">+15196722121</td>
+                            <td class="column-5">Siskinds Desmeules</td>
+                            <td class="column-6">Law Firm</td>
+                            <td class="column-7">Qubec</td>
+                            <td class="column-8">http://www.siskinds.com/qc</td>
+                        </tr>
+                        <tr class="row-54 odd">
+                            <td class="column-1">Allan Stitt</td>
+                            <td class="column-2">President</td>
+                            <td class="column-3">allan@adrchambers.com</td>
+                            <td class="column-4">+14163628555</td>
+                            <td class="column-5">Adr Chambers</td>
+                            <td class="column-6">Law Firm</td>
+                            <td class="column-7">Toronto</td>
+                            <td class="column-8">http://adrchambers.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Can't Touch Code -->
+
+
+
+            </div>
+        </div>
+
+        <!-- <button class="btn btn-light float-right" id="downloadButton">Download</button> -->
+
+    </div>
+
+
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+
+
+</body>
+
+</html>
