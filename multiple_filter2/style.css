@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+
 .country{
     height: 450px;
     overflow-x: hidden;
     overflow-y: auto;
-    text-align:justify;
 }
 .city{
     height: 450px;
@@ -22,24 +29,27 @@
     text-align:justify;
 }
 .btn_country{
+    text-align: center;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+
     box-shadow: 2px 2px 1px 0px rgba(197, 195, 195, 0.5);
     border-radius: 5px;
 }
 .btn_city{
-    width: 49%;
+    display: inline-block;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 0 #ddd;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.btn_industry{
     display: flex;
     justify-content: space-between;
     box-shadow: 2px 2px 1px 0px rgba(197, 195, 195, 0.5);
     border-radius: 5px;
 }
 
-.btn_industry{
-    width: 49%;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 2px 2px 1px 0px rgba(197, 195, 195, 0.5);
-    border-radius: 5px;
+.table_top{
+    /* border: 1px solid #000; */
 }

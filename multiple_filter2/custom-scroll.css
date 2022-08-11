@@ -1,0 +1,35 @@
+/* width */
+
+  /* Track */
+  .country::-webkit-scrollbar-track,
+  .city::-webkit-scrollbar-track,
+  .industry::-webkit-scrollbar-track
+  {
+    background: #f1f1f1;
+    border-radius: 50px;
+  }
+  
+  /* Handle */
+  .country::-webkit-scrollbar-thumb ,
+  .city::-webkit-scrollbar-thumb ,
+  .industry::-webkit-scrollbar-thumb 
+  {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  .country::-webkit-scrollbar-thumb:hover ,
+  .city::-webkit-scrollbar-thumb:hover ,
+  .industry::-webkit-scrollbar-thumb:hover 
+  {
+    background: #555;
+  }
+
+
+  .country::-webkit-scrollbar,
+  .city::-webkit-scrollbar,
+  .industry::-webkit-scrollbar {
+    width: 5px;
+    background: #00000031;
+  }
