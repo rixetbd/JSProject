@@ -11,6 +11,28 @@
     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="custom-scroll.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        #myTable tr td:nth-child(1),
+        #myTable tr td:nth-child(3),
+        #myTable tr td:nth-child(5)
+        {
+            min-width: 200px !important;
+        }
+
+        #myTable tr td:nth-child(2),
+        #myTable tr td:nth-child(4),
+        #myTable tr td:nth-child(6),
+        #myTable tr td:nth-child(7)
+        {
+            min-width: 180px !important;
+        }
+        .box_shadow_table{
+            padding: 15px;
+            box-shadow: inset 3px 3px 13.5px 0 #eeeeee;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -44,14 +66,16 @@
         </div>
 
         <br>
-        <div class="row my-5">
+        <div class="row my-5 box_shadow_table">
             <div class="col-lg-8 col-md-8 col-sm-12">
                 <div class="table_top">
                     <div>
                         <button class="btn btn_city" id="table_Name">Name <i class="fas fa-plus"></i></button>
+                        <button class="btn btn_city" id="table_Title">Title <i class="fas fa-plus"></i></button>
                         <button class="btn btn_city" id="table_Email">Email <i class="fas fa-plus"></i></button>
                         <button class="btn btn_city" id="table_Phone">Phone <i class="fas fa-plus"></i></button>
                         <button class="btn btn_city" id="table_Company">Company <i class="fas fa-plus"></i></button>
+                        <button class="btn btn_city" id="table_Company_Size">Company Size <i class="fas fa-plus"></i></button>
                         <button class="btn btn_city" id="table_Revenue">Revenue <i class="fas fa-plus"></i></button>
                         <button class="btn btn_city" id="table_City">City <i class="fas fa-plus"></i></button>
                         <button class="btn btn_city" id="table_URL">Website <i class="fas fa-plus"></i></button>
@@ -68,44 +92,184 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-12 col-md-12 col-sm-12">
-            <table class="table" id="myTable">
+        <div class="col-lg-12 col-md-12 col-sm-12 my-5" style="overflow-x:auto;">
+            <table class="table table-responsive" id="myTable">
                 <thead>
                     <th>Name</th>
+                    <th>Job Title</th>
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Company</th>
+                    <th>Company Size</th>
                     <th>Revenue</th>
                     <th>City</th>
                     <th>Website</th>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>AM</td>
-                        <td>Rana</td>
-                        <td>Name</td>
-                        <td>Name</td>
-                        <td>Name</td>
-                        <td>Name</td>
-                        <td>Rabiul</td>
+                        <td>Mark Cardy</td>
+                        <td>Owner</td>
+                        <td>mark.cardy@inmydefence.com</td>
+                        <td>+16135478686</td>
+                        <td>Cardy Legal Services</td>
+                        <td>11 to 15</td>
+                        <td>$6.7 M</td>
+                        <td>Kingston</td>
+                        <td>https://inmydefence.com/</td>
                     </tr>
                     <tr>
-                        <td>Name</td>
-                        <td>Name</td>
-                        <td>Name</td>
-                        <td>Name</td>
-                        <td>Name</td>
-                        <td>Name</td>
-                        <td>Name</td>
+                        <td>Heather McKnight</td>
+                        <td>Lawyer</td>
+                        <td>heather@mcknightfamilylaw.com</td>
+                        <td>+17054080278</td>
+                        <td>McKnight Family Law</td>
+                        <td>10 to 50</td>
+                        <td>$5 M</td>
+                        <td>Barrie</td>
+                        <td>https://mcknight-family-law.business.site/</td>
                     </tr>
                     <tr>
-                        <td>Name</td>
-                        <td>Name</td>
-                        <td>Name</td>
-                        <td>Name</td>
-                        <td>Name</td>
-                        <td>Name</td>
-                        <td>Name</td>
+                        <td>Luce Morrow</td>
+                        <td>Director</td>
+                        <td>l.morrow@notarius.net</td>
+                        <td>+14503483337</td>
+                        <td>Me Luce Morrow, notaire</td>
+                        <td>2 to 10</td>
+                        <td>$5.1 M</td>
+                        <td>Quebec</td>
+                        <td>https://lucemorrownotaire.com/</td>
+                    </tr>
+                    <tr>
+                        <td>Margot Poepjes</td>
+                        <td>Lawyer</td>
+                        <td>mpoepjeslaw@rogers.com</td>
+                        <td>+16472730802</td>
+                        <td>Margot Poepjes Family Lawyer</td>
+                        <td>11 to 15</td>
+                        <td>$5.2 M</td>
+                        <td>Toronto</td>
+                        <td>https://margotpoepjes.com/</td>
+                    </tr>
+                    <tr>
+                        <td>Ryan McMackin</td>
+                        <td>Lawyer</td>
+                        <td>ryanmcmackin44@hotmail.com</td>
+                        <td>+16474513232</td>
+                        <td>McMackin Law</td>
+                        <td>10 to 50</td>
+                        <td>$5 M</td>
+                        <td>Bowmanville</td>
+                        <td>https://mcmackinlaw.ca/contact/</td>
+                    </tr>
+                    <tr>
+                        <td>Edith Szilagyi</td>
+                        <td>Founder</td>
+                        <td>edith@novabc.ca</td>
+                        <td>+16048003306</td>
+                        <td>Nova Law Corporation</td>
+                        <td>2 to 10</td>
+                        <td>$5.1 M</td>
+                        <td>Port Moody</td>
+                        <td>https://novabc.ca/</td>
+                    </tr>
+                    <tr>
+                        <td>Mark McMackin</td>
+                        <td>Partner</td>
+                        <td>mark@mcmackinlawyers.ca</td>
+                        <td>+14165274710</td>
+                        <td>McMackin Lawyers</td>
+                        <td>10 to 15</td>
+                        <td>$5 M</td>
+                        <td>Toronto</td>
+                        <td>https://mcmackinlawyers.ca/</td>
+                    </tr>
+                    <tr>
+                        <td>Ken Strong</td>
+                        <td>Partner</td>
+                        <td>strong@municipallawyers.ca</td>
+                        <td>+15196723535</td>
+                        <td>Strong Macdougal Oudekerk</td>
+                        <td>2 to 10</td>
+                        <td>$5 M</td>
+                        <td>Toronto</td>
+                        <td>https://municipallawyers.ca/</td>
+                    </tr>
+                    <tr>
+                        <td>John Watson</td>
+                        <td>Partner</td>
+                        <td>jwatson@nicholsonsmith.com</td>
+                        <td>+15196793366</td>
+                        <td>John Watson</td>
+                        <td>11 to 15</td>
+                        <td>$6 M</td>
+                        <td>Toronto</td>
+                        <td>https://nicholsonsmith.com/</td>
+                    </tr>
+                    <tr>
+                        <td>Curtis Rutt</td>
+                        <td>Director</td>
+                        <td>curtis@bulwarklegal.ca</td>
+                        <td>+17058627875</td>
+                        <td>Bulwark Legal Services</td>
+                        <td>11 to 50</td>
+                        <td>$5 M</td>
+                        <td>Orangeville</td>
+                        <td>http://www.bulwarklegal.ca/</td>
+                    </tr>
+                    <tr>
+                        <td>Paula Venegas</td>
+                        <td>Lawyer</td>
+                        <td>paula@paulavenegas.com</td>
+                        <td>+16047442576</td>
+                        <td>Paula Venegas Law Corp.</td>
+                        <td>11 to 50</td>
+                        <td>$5.1 M</td>
+                        <td>Abbotsford</td>
+                        <td>https://paulavenegas.com/</td>
+                    </tr>
+                    <tr>
+                        <td>Richard Campbell</td>
+                        <td>Lawyer</td>
+                        <td>richard@petkerlaw.com</td>
+                        <td>+15198861204</td>
+                        <td>Campbell Litigation</td>
+                        <td>11 to 50</td>
+                        <td>$5 M</td>
+                        <td>Waterloo</td>
+                        <td>https://petkerlaw.com/</td>
+                    </tr>
+                    <tr>
+                        <td>Carly Hills</td>
+                        <td>Partner</td>
+                        <td>carly@pshlawyers.ca</td>
+                        <td>+15196212450</td>
+                        <td>PSH Lawyers</td>
+                        <td>11 to 50</td>
+                        <td>$5 M</td>
+                        <td>Cambridge</td>
+                        <td>https://pettittschwarz.com/</td>
+                    </tr>
+                    <tr>
+                        <td>Nicole Druckman</td>
+                        <td>Lawyer</td>
+                        <td>druckman@drdlaw.ca</td>
+                        <td>+15068573594</td>
+                        <td>M. MORLEY RINZLER - Delehanty Rinzler Druckman</td>
+                        <td>11 to 50</td>
+                        <td>$5.3 M</td>
+                        <td>Moncton</td>
+                        <td>https://www.drdlaw.ca/</td>
+                    </tr>
+                    <tr>
+                        <td>Nicholas Robinson</td>
+                        <td>Lawyer</td>
+                        <td>nick@nprobinson.com</td>
+                        <td>+13065851777</td>
+                        <td>Robinson Barristers</td>
+                        <td>11 to 50</td>
+                        <td>$5 M</td>
+                        <td>Toronto</td>
+                        <td>https://nprobinson.com/</td>
                     </tr>
                 </tbody>
             </table>
