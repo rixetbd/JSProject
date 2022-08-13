@@ -28,13 +28,13 @@ cityInput.addEventListener('keyup', function () {
 const citySearch = () => {
     var cunValue = cityInput.value.toUpperCase();
     state_Name_ID.textContent = "";
-    for (let i = 0; i < stateNames.length; i++) {
-        let valuuu = stateNames[i];
+    for (let i = 0; i < allCity.length; i++) {
+        let valuuu = allCity[i];
         if (valuuu.toUpperCase().indexOf(cunValue) > -1) {
             let boxDiv = document.createElement("button");
             boxDiv.className = "btn my-1 btn_city";
-            boxDiv.textContent = stateNames[i];
-            boxDiv.setAttribute('id', stateNames[i]);
+            boxDiv.textContent = allCity[i];
+            boxDiv.setAttribute('id', allCity[i]);
             state_Name_ID.appendChild(boxDiv);
         }
     }
