@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="custom-scroll.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="my-5">
@@ -18,65 +21,97 @@
 
     <div class="container">
         <div class="row">
-            
+
             <div class="col-lg-4 col-md-4 col-sm-12" id="">
-                <input type="text" name="" id="" class="form-control mb-3" placeholder="Search for country">
+                <input type="text" id="countryInput" class="form-control mb-3" placeholder="Search for country">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12" id="">
-                <input type="text" name="" id="" class="form-control mb-3" placeholder="Search for city">
+                <input type="text" id="cityInput" class="form-control mb-3" placeholder="Search for city">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12" id="">
-                <input type="text" name="" id="" class="form-control mb-3" placeholder="Search for industry">
+                <input type="text" id="industryInput" class="form-control mb-3" placeholder="Search for industry">
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-12 country" id="country_Name_ID">
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-12 city" id="state_Name_ID">
-                
+
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 industry" id="industry_Name_ID">
-                
+
             </div>
         </div>
 
         <br>
-        <div class="row mt-5">
-            <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="row my-5">
+            <div class="col-lg-8 col-md-8 col-sm-12">
                 <div class="table_top">
                     <div>
-                        <button class="btn btn_city">Name <i class="fa-regular fa-plus"></i></button>
-                        <button class="btn btn_city">Email <i class="fa-regular fa-plus"></i></button>
-                        <button class="btn btn_city">Phone <i class="fa-regular fa-plus"></i></button>
-                        <button class="btn btn_city">Company <i class="fa-regular fa-plus"></i></button>
-                        <button class="btn btn_city">URL <i class="fa-regular fa-plus"></i></button>
-                        <button class="btn btn_city">Revenue <i class="fa-regular fa-plus"></i></button>
-                        <button class="btn btn_city">City <i class="fa-regular fa-plus"></i></button>
+                        <button class="btn btn_city" id="table_Name">Name <i class="fa-regular fa-plus"></i></button>
+                        <button class="btn btn_city" id="table_Email">Email <i class="fa-regular fa-plus"></i></button>
+                        <button class="btn btn_city" id="table_Phone">Phone <i class="fa-regular fa-plus"></i></button>
+                        <button class="btn btn_city" id="table_Company">Company <i class="fa-regular fa-plus"></i></button>
+                        <button class="btn btn_city" id="table_Revenue">Revenue <i class="fa-regular fa-plus"></i></button>
+                        <button class="btn btn_city" id="table_City">City <i class="fa-regular fa-plus"></i></button>
+                        <button class="btn btn_city" id="table_URL">Website <i class="fa-regular fa-plus"></i></button>
+                        <button class="btn btn_city" id="table_URL">Refresh <i class="fa-regular fa-plus"></i></button>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="row table_top">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="row">
                     <div class="col-4">
-                        <img class="img-fluid rounded" src="../multiple_filter/img/CANNABIST.jpg" alt="">
+                        <img src="../multiple_filter/img/Country_Canada.jpg" alt="" class="img-fluid">
                     </div>
-                    <div class="col-6">
-                        <table class="table table">
-                            <tbody>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Country</td>
-                                </tr>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Country</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <div class="col-8"></div>
                 </div>
             </div>
         </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <table class="table" id="myTable">
+                <thead>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Company</th>
+                    <th>Revenue</th>
+                    <th>City</th>
+                    <th>Website</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AM</td>
+                        <td>Rana</td>
+                        <td>Name</td>
+                        <td>Name</td>
+                        <td>Name</td>
+                        <td>Name</td>
+                        <td>Rabiul</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Name</td>
+                        <td>Name</td>
+                        <td>Name</td>
+                        <td>Name</td>
+                        <td>Name</td>
+                        <td>Name</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Name</td>
+                        <td>Name</td>
+                        <td>Name</td>
+                        <td>Name</td>
+                        <td>Name</td>
+                        <td>Name</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
     </div>
 
 
@@ -84,7 +119,19 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="js/variable.js"></script>
+    <script src="js/all_city.js"></script>
+    <script src="js/table-filter.js"></script>
+    <script src="js/search.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
 
 </body>
+
 </html>
