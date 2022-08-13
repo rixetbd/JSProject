@@ -5,6 +5,7 @@ let countryNames = ['Australia','Canada','France','German','Newzeland','Spain','
 
 let stateNames = ['ALBERTA', 'BRITISH COLUMBIA', 'MANITOBA', 'NEW BRUNSWICK', 'NEWFOUNDLAND', 'LABRADOR', 'NORTHWEST TERRITORIES', 'NOVA SCOTIA', 'NUNAVUT', 'ONTARIO', 'PRINCE EDWARD ISLAND', 'QUEBEC', 'SASKATCHEWAN', 'YUKON', 'ALBERTA', 'BRITISH COLUMBIA', 'MANITOBA', 'NEW BRUNSWICK', 'NEWFOUNDLAND AND LABRADOR', 'NORTHWEST TERRITORIES', 'NOVA SCOTIA', 'NUNAVUT', 'ONTARIO', 'PRINCE EDWARD ISLAND', 'QUEBEC', 'SASKATCHEWAN', 'YUKON'];
 
+
 let industryNames = ['CANNABIST', 'CHRIOPRACTOR', 'DENTAL', 'E-COMMERCE', 'FOOTBALL CLUB', 'HVAC', 'LAW FIRM', 'OPTOMETRY', 'PHYSIOTHERAPY', 'PLASTIC SURGEONS', 'REAL ESTATE', 'VETERINARIANS', 'ALBERTA', 'BRITISH COLUMBIA', 'MANITOBA', 'NEW BRUNSWICK', 'NEWFOUNDLAND AND LABRADOR', 'NORTHWEST TERRITORIES', 'NOVA SCOTIA', 'NUNAVUT', 'ONTARIO', 'PRINCE EDWARD ISLAND', 'QUEBEC', 'SASKATCHEWAN', 'YUKON'];
 
 countryNames.sort();
@@ -26,21 +27,21 @@ for (let i = 0; i < countryNames.length; i++) {
     country_Name_ID.appendChild(boxDiv);
 }
 
-function stateNamesShow(stateNames){
-    for (let i = 0; i < stateNames.length; i++) {
 
-        if (stateNames[i].length > 20) {
-            stateNames[i] = stateNames[i].slice(0, 20) + "...";
-        }
-    
-        let boxDiv = document.createElement("button");
-        boxDiv.className = "btn my-1 btn_city";
-        boxDiv.textContent = stateNames[i];
-        boxDiv.setAttribute('id', stateNames[i]);
-        state_Name_ID.appendChild(boxDiv);
-    }
-}
-stateNamesShow(stateNames);
+// for (let i = 0; i < stateNames.length; i++) {
+
+//     if (stateNames[i].length > 20) {
+//         stateNames[i] = stateNames[i].slice(0, 20) + "...";
+//     }
+
+//     let boxDiv = document.createElement("button");
+//     boxDiv.className = "btn my-1 btn_city";
+//     boxDiv.textContent = stateNames[i];
+//     boxDiv.setAttribute('id', stateNames[i]);
+//     state_Name_ID.appendChild(boxDiv);
+// }
+
+
 
 for (let i = 0; i < industryNames.length; i++) {
 
