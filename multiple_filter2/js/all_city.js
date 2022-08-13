@@ -6,33 +6,58 @@ let AustraliaCity = ['Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Go
 
 
 let allCity = USACity.concat(AustraliaCity);
+AustraliaCity.sort();
+USACity.sort();
 allCity.sort();
 
 
 let countryBTN = country_Name_ID.getElementsByTagName('button');
 
-// console.log(countryBTN[2]);
 
-countryBTN.addEventListener('click', function(){
+for (let i = 0; i < countryBTN.length; i++) {
+    let cnID = document.getElementById(countryBTN[i].id);
+    cnID.addEventListener('click', function(){
+        if(cnID.id == 'Australia'){
+ 
+            state_Name_ID.textContent = '';
 
-    console.log("countryBTN.innerText");
-    console.log(countryBTN);
+            for (let i = 0; i < AustraliaCity.length; i++) {
 
-    if(countryBTN.innerText == 'USA'){
-        state_Name_ID.appendChild(' ');
-        for (let i = 0; i < USACity.length; i++) {
-            if (USACity[i].length > 20) {
-                USACity[i] = USACity[i].slice(0, 20) + "...";
+                if (AustraliaCity[i].length > 20) {
+                    AustraliaCity[i] = AustraliaCity[i].slice(0, 20) + "...";
+                }
+            
+                let boxDiv = document.createElement("button");
+                boxDiv.className = "btn my-1 btn_city";
+                boxDiv.textContent = AustraliaCity[i];
+                boxDiv.setAttribute('id', AustraliaCity[i]);
+                state_Name_ID.appendChild(boxDiv);
             }
-        
-            let boxDiv = document.createElement("button");
-            boxDiv.className = "btn my-1 btn_city";
-            boxDiv.textContent = USACity[i];
-            boxDiv.setAttribute('id', USACity[i]);
-            state_Name_ID.appendChild(boxDiv);
         }
-    }
+        
+    });
+}
+
+// countryBTN.addEventListener('click', function(){
+
+//     console.log("countryBTN.innerText");
+//     console.log(this.innerText);
+
+    // if(countryBTN.innerText == 'USA'){
+    //     state_Name_ID.appendChild(' ');
+    //     for (let i = 0; i < USACity.length; i++) {
+    //         if (USACity[i].length > 20) {
+    //             USACity[i] = USACity[i].slice(0, 20) + "...";
+    //         }
+        
+    //         let boxDiv = document.createElement("button");
+    //         boxDiv.className = "btn my-1 btn_city";
+    //         boxDiv.textContent = USACity[i];
+    //         boxDiv.setAttribute('id', USACity[i]);
+    //         state_Name_ID.appendChild(boxDiv);
+    //     }
+    // }
     
-});
+// });
 
 // if(countryBTN)

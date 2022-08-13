@@ -26,18 +26,21 @@ for (let i = 0; i < countryNames.length; i++) {
     country_Name_ID.appendChild(boxDiv);
 }
 
-for (let i = 0; i < stateNames.length; i++) {
+function stateNamesShow(stateNames){
+    for (let i = 0; i < stateNames.length; i++) {
 
-    if (stateNames[i].length > 20) {
-        stateNames[i] = stateNames[i].slice(0, 20) + "...";
+        if (stateNames[i].length > 20) {
+            stateNames[i] = stateNames[i].slice(0, 20) + "...";
+        }
+    
+        let boxDiv = document.createElement("button");
+        boxDiv.className = "btn my-1 btn_city";
+        boxDiv.textContent = stateNames[i];
+        boxDiv.setAttribute('id', stateNames[i]);
+        state_Name_ID.appendChild(boxDiv);
     }
-
-    let boxDiv = document.createElement("button");
-    boxDiv.className = "btn my-1 btn_city";
-    boxDiv.textContent = stateNames[i];
-    boxDiv.setAttribute('id', stateNames[i]);
-    state_Name_ID.appendChild(boxDiv);
 }
+stateNamesShow(stateNames);
 
 for (let i = 0; i < industryNames.length; i++) {
 
