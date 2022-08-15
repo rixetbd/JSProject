@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+.country{
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.city{
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+}
+.industry{
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+}
+.btn_country{
+    text-align: center;
+    width: 100%;
+
+    box-shadow: 2px 2px 1px 0px rgba(197, 195, 195, 0.5);
+    border-radius: 5px;
+}
+.btn_city{
+    display: inline-block;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 0 #ddd;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.btn_industry{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 2px 1px 0px rgba(197, 195, 195, 0.5);
+    border-radius: 5px;
+}
+
+/* Style CSS on 15 August */
+
+.search_div {
+    margin: 10px 0;
+}
+.search_div label{
+    cursor: pointer;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search_div label i{
+    margin-right: 5px;
+    cursor: pointer;
+}
