@@ -60,15 +60,23 @@ $('#filter').click(function(){
     let countryName = $('#country_Name_ID').select2().val();
     let cityName = $('#state_Name_ID').select2().val();
     let industryName = $('#industry_Name_ID').select2().val();
-    showCountryFlag.setAttribute('src', flagAddress[countryName]);
-    showCountryName.textContent = countryName;
-    showCityName.textContent = cityName;
-    showIndustryName.textContent = industryName;
+
+    if(countryName != " " && cityName != " " && industryName != " "){    
+        showCountryFlag.setAttribute('src', flagAddress[countryName]);
+        showCountryName.textContent = countryName;
+        showCityName.textContent = cityName;
+        showIndustryName.textContent = industryName;
+    }
 })
 $('#reset').click(function(){
     $('#country_Name_ID').val(null).trigger('change');
     $('#state_Name_ID').val(null).trigger('change');
     $('#industry_Name_ID').val(null).trigger('change');
+
+    showCountryFlag.setAttribute('src', "https://i0.wp.com/css-tricks.com/wp-content/uploads/2017/08/facebook-skeleton.png");
+    showCountryName.textContent = "N/A";
+    showCityName.textContent = "N/A";
+    showIndustryName.textContent = "N/A";
 })
 
 $('#CONCON').click(function(){
