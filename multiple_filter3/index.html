@@ -33,6 +33,15 @@
             box-shadow: inset 3px 3px 13.5px 0 #eeeeee;
             border-radius: 5px;
         }
+
+        .select2-container--default .select2-selection--single {
+            border: 1px solid #aaa;
+            border-radius: 25px;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            font-size: 14px;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__arrow {right: 5px;}
     </style>
 </head>
 
@@ -43,18 +52,18 @@
             <div class="col-md-3">
                 <div class="col-12 search_div" id="">
                     <label for="" class="w-100">Country Name <i class="fa-solid fa-angle-down"></i></label>
-                    <select class="js-example-basic-single form-control" id="country_Name_ID"></select>
+                    <select class="form-control" id="country_Name_ID"></select>
                 </div>
                 <div class="col-12 search_div" id="">
-                    <label for="" class="w-100">City Name <i class="fa-solid fa-angle-down"></i></label>
-                    <select class="js-example-basic-single form-control" id="state_Name_ID"></select>
+                    <label for="" class="w-100">City Name <i class="fa-solid fa-angle-down" id="CONCON"></i></label>
+                    <select class="form-control" id="state_Name_ID"></select>
                 </div>
                 <div class="col-12 search_div" id="">
                     <label for="" class="w-100">Industry Name <i class="fa-solid fa-angle-down"></i></label>
-                    <select class="js-example-basic-single form-control" id="industry_Name_ID"></select>
+                    <select class="form-control" id="industry_Name_ID"></select>
                 </div>
-                <button class="btn btn_city" id="">Filter</button>
-                <button class="btn btn_city" id="">Reset</button>
+                <button class="btn btn_city" id="filter">Filter</button>
+                <button class="btn btn_city" id="reset">Reset</button>
             </div>
 
             <div class="col-lg-1 col-md-1"></div>
@@ -63,15 +72,15 @@
                 <h5>You Have Selected</h5>
                 <div class="row">
                     <div class="col-6">Country</div>
-                    <div class="col-6">Country</div>
+                    <div class="col-6" id="showCountryName">Country</div>
                     <div class="col-6">City</div>
-                    <div class="col-6">Country</div>
+                    <div class="col-6" id="showCityName">Country</div>
                     <div class="col-6">Industry</div>
-                    <div class="col-6">Country</div>
+                    <div class="col-6" id="showIndustryName">Country</div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <img src="../multiple_filter/img/Country_Canada.jpg" alt="" class="img-fluid" width="250" style="border-radius: 5px;float: right;">
+                <img src="" alt="" class="img-fluid" id="showCountryFlag" width="250" style="border-radius: 5px;float: right;">
             </div>
 
         <div class="col-md-12 my-3 d-flex justify-content-between">
@@ -104,8 +113,8 @@
                     <tr>
                         <td>Mark Cardy</td>
                         <td>Owner</td>
-                        <td>mark.cardy@inmydefence.com</td>
-                        <td>+16135478686</td>
+                        <td>mark*****@*********.com</td>
+                        <td>+16135******</td>
                         <td>Cardy Legal Services</td>
                         <td>11 to 15</td>
                         <td>$6.7 M</td>
@@ -115,8 +124,8 @@
                     <tr>
                         <td>Heather McKnight</td>
                         <td>Lawyer</td>
-                        <td>heather@mcknightfamilylaw.com</td>
-                        <td>+17054080278</td>
+                        <td>heather@*********.com</td>
+                        <td>+17054******</td>
                         <td>McKnight Family Law</td>
                         <td>10 to 50</td>
                         <td>$5 M</td>
@@ -126,8 +135,8 @@
                     <tr>
                         <td>Luce Morrow</td>
                         <td>Director</td>
-                        <td>l.morrow@notarius.net</td>
-                        <td>+14503483337</td>
+                        <td>l.morrow@*********.net</td>
+                        <td>+14503******</td>
                         <td>Me Luce Morrow, notaire</td>
                         <td>2 to 10</td>
                         <td>$5.1 M</td>
@@ -137,8 +146,8 @@
                     <tr>
                         <td>Margot Poepjes</td>
                         <td>Lawyer</td>
-                        <td>mpoepjeslaw@rogers.com</td>
-                        <td>+16472730802</td>
+                        <td>mpoepjeslaw@*********.com</td>
+                        <td>+1647******</td>
                         <td>Margot Poepjes Family Lawyer</td>
                         <td>11 to 15</td>
                         <td>$5.2 M</td>
@@ -148,8 +157,8 @@
                     <tr>
                         <td>Ryan McMackin</td>
                         <td>Lawyer</td>
-                        <td>ryanmcmackin44@hotmail.com</td>
-                        <td>+16474513232</td>
+                        <td>ryanmcmackin44@*********.com</td>
+                        <td>+16474******</td>
                         <td>McMackin Law</td>
                         <td>10 to 50</td>
                         <td>$5 M</td>
@@ -159,8 +168,8 @@
                     <tr>
                         <td>Edith Szilagyi</td>
                         <td>Founder</td>
-                        <td>edith@novabc.ca</td>
-                        <td>+16048003306</td>
+                        <td>edith@*********.ca</td>
+                        <td>+16048******</td>
                         <td>Nova Law Corporation</td>
                         <td>2 to 10</td>
                         <td>$5.1 M</td>
@@ -170,8 +179,8 @@
                     <tr>
                         <td>Mark McMackin</td>
                         <td>Partner</td>
-                        <td>mark@mcmackinlawyers.ca</td>
-                        <td>+14165274710</td>
+                        <td>mark@*********.ca</td>
+                        <td>+14165******</td>
                         <td>McMackin Lawyers</td>
                         <td>10 to 15</td>
                         <td>$5 M</td>
@@ -181,8 +190,8 @@
                     <tr>
                         <td>Ken Strong</td>
                         <td>Partner</td>
-                        <td>strong@municipallawyers.ca</td>
-                        <td>+15196723535</td>
+                        <td>strong@*********.ca</td>
+                        <td>+15196******</td>
                         <td>Strong Macdougal Oudekerk</td>
                         <td>2 to 10</td>
                         <td>$5 M</td>
@@ -192,8 +201,8 @@
                     <tr>
                         <td>John Watson</td>
                         <td>Partner</td>
-                        <td>jwatson@nicholsonsmith.com</td>
-                        <td>+15196793366</td>
+                        <td>jwatson@*********.com</td>
+                        <td>+15196******</td>
                         <td>John Watson</td>
                         <td>11 to 15</td>
                         <td>$6 M</td>
@@ -203,8 +212,8 @@
                     <tr>
                         <td>Curtis Rutt</td>
                         <td>Director</td>
-                        <td>curtis@bulwarklegal.ca</td>
-                        <td>+17058627875</td>
+                        <td>curtis@*********.ca</td>
+                        <td>+17058******</td>
                         <td>Bulwark Legal Services</td>
                         <td>11 to 50</td>
                         <td>$5 M</td>
@@ -214,8 +223,8 @@
                     <tr>
                         <td>Paula Venegas</td>
                         <td>Lawyer</td>
-                        <td>paula@paulavenegas.com</td>
-                        <td>+16047442576</td>
+                        <td>paula@*********.com</td>
+                        <td>+16047******</td>
                         <td>Paula Venegas Law Corp.</td>
                         <td>11 to 50</td>
                         <td>$5.1 M</td>
@@ -225,8 +234,8 @@
                     <tr>
                         <td>Richard Campbell</td>
                         <td>Lawyer</td>
-                        <td>richard@petkerlaw.com</td>
-                        <td>+15198861204</td>
+                        <td>richard@*********.com</td>
+                        <td>+151988******</td>
                         <td>Campbell Litigation</td>
                         <td>11 to 50</td>
                         <td>$5 M</td>
@@ -236,8 +245,8 @@
                     <tr>
                         <td>Carly Hills</td>
                         <td>Partner</td>
-                        <td>carly@pshlawyers.ca</td>
-                        <td>+15196212450</td>
+                        <td>carly@*********.ca</td>
+                        <td>+1519******</td>
                         <td>PSH Lawyers</td>
                         <td>11 to 50</td>
                         <td>$5 M</td>
@@ -247,8 +256,8 @@
                     <tr>
                         <td>Nicole Druckman</td>
                         <td>Lawyer</td>
-                        <td>druckman@drdlaw.ca</td>
-                        <td>+15068573594</td>
+                        <td>druckman@*********.ca</td>
+                        <td>+1506******</td>
                         <td>M. MORLEY RINZLER - Delehanty Rinzler Druckman</td>
                         <td>11 to 50</td>
                         <td>$5.3 M</td>
@@ -258,8 +267,8 @@
                     <tr>
                         <td>Nicholas Robinson</td>
                         <td>Lawyer</td>
-                        <td>nick@nprobinson.com</td>
-                        <td>+13065851777</td>
+                        <td>nick@*********.com</td>
+                        <td>+13065******</td>
                         <td>Robinson Barristers</td>
                         <td>11 to 50</td>
                         <td>$5 M</td>
@@ -292,7 +301,9 @@
             $('#myTable').DataTable();
         });
         $(document).ready(function() {
-            $('.js-example-basic-single').select2();
+            $('#country_Name_ID').select2();
+            $('#state_Name_ID').select2();
+            $('#industry_Name_ID').select2();
         });
     </script>
 
