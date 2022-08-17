@@ -196,8 +196,12 @@ table_City.addEventListener('click', function () {
         show_hide_column();
         var lastColHeader = Array.prototype.slice.call(document.querySelectorAll('th:nth-child(8)', 'table'), 0); // get the header cell
         var lastColCells = Array.prototype.slice.call(document.querySelectorAll('td:nth-child(8)', 'table'), 0).concat(lastColHeader); // get the column cells, and add header
+        var lastColCellsOnly = Array.prototype.slice.call(document.querySelectorAll('td:nth-child(8)', 'table'), 0); // get the column cells, and add header
         lastColCells.forEach(function (cell) { // iterate and hide
             cell.style.removeProperty('display');
+        });
+        lastColCellsOnly.forEach(function (cell) { // iterate and hide
+            cell.textContent = "none";
         });
     }
     

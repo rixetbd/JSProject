@@ -6,7 +6,7 @@ const CityArr = [ {
     },{
         FranchCity:['Paris', 'Marseille', 'Lyon', 'Toulouse', 'Nice', 'Nantes', 'Montpellier', 'Strasbourg', 'Bordeaux', 'Lille', 'Rennes', 'Reims', 'Toulon', 'Saint-Étienne', 'Le Havre', 'Grenoble', 'Dijon', 'Angers', 'Saint-Denis', 'Villeurbanne', 'Nîmes', 'Clermont-Ferrand', 'Aix-en-Provence', 'Le Mans', 'Brest', 'Tours', 'Amiens', 'Limoges', 'Annecy', 'Boulogne-Billancourt', 'Perpignan', 'Metz', 'Besançon', 'Orléans', 'Saint-Denis', 'Rouen', 'Montreuil', 'Argenteuil', 'Mulhouse', 'Caen', 'Nancy', 'Saint-Paul', 'Roubaix', 'Tourcoing', 'Nanterre', 'Vitry-sur-Seine', 'Créteil', 'Avignon', 'Poitiers', 'Aubervilliers', 'Asnières-sur-Seine', 'Aulnay-sous-Bois', 'Colombes', 'Dunkirk', 'Saint-Pierre', 'Versailles', 'Courbevoie', 'Le Tampon', 'Cherbourg-en-Cotentin', 'Rueil-Malmaison', 'Béziers', 'La Rochelle', 'Champigny-sur-Marne', 'Fort-de-France', 'Pau', 'Saint-Maur-des-Fossés', 'Cannes', 'Antibes', 'Calais', 'Drancy', 'Mérignac', 'Mamoudzou', 'Saint-Nazaire', 'Ajaccio', 'Colmar', 'Issy-les-Moulineaux', 'Noisy-le-Grand', 'Vénissieux', 'Levallois-Perret', 'Cergy', 'Cayenne', 'Pessac', 'Valence', 'Bourges', 'Ivry-sur-Seine', 'Quimper', 'Clichy', 'La Seyne-sur-Mer', 'Antony', 'Troyes', 'Villeneuve-d"Ascq', 'Montauban', 'Pantin', 'Neuilly-sur-Seine', 'Sarcelles', 'Niort', 'Chambéry', 'Le Blanc-Mesnil', 'Lorient', 'Beauvais']
     },{
-        GarmanCity : ['Berlin', 'Hamburg', 'Munich (München)', 'Cologne (Köln)', 'Frankfurt am Main', 'Stuttgart', 'Düsseldorf', 'Dortmund', 'Essen', 'Leipzig', 'Bremen', 'Dresden', 'Hanover (Hannover)', 'Nuremberg (Nürnberg)', 'Duisburg', 'Bochum', 'Wuppertal', 'Bielefeld', 'Bonn', 'Münster', 'Karlsruhe', 'Mannheim', 'Augsburg', 'Wiesbaden', 'Gelsenkirchen', 'Mönchengladbach', 'Braunschweig', 'Chemnitz', 'Kiel', 'Aachen', 'Halle (Saale)', 'Magdeburg', 'Freiburg im Breisgau', 'Krefeld', 'Lübeck', 'Oberhausen', 'Erfurt', 'Mainz', 'Rostock', 'Kassel', 'Hagen', 'Hamm', 'Saarbrücken', 'Mülheim an der Ruhr', 'Potsdam', 'Ludwigshafen am Rhein', 'Oldenburg', 'Leverkusen', 'Osnabrück', 'Solingen', 'Heidelberg', 'Herne', 'Neuss', 'Darmstadt', 'Paderborn', 'Regensburg', 'Ingolstadt', 'Würzburg', 'Fürth', 'Wolfsburg', 'Offenbach am Main', 'Ulm', 'Heilbronn', 'Pforzheim', 'Göttingen', 'Bottrop', 'Trier', 'Recklinghausen', 'Reutlingen', 'Bremerhaven', 'Koblenz', 'Bergisch Gladbach', 'Jena', 'Remscheid', 'Erlangen', 'Moers', 'Siegen', 'Hildesheim', 'Salzgitter']
+        GarmanCity : ['Berlin', 'Hamburg', 'Munich', 'Cologne', 'Frankfurt am Main', 'Stuttgart', 'Düsseldorf', 'Dortmund', 'Essen', 'Leipzig', 'Bremen', 'Dresden', 'Hanover (Hannover)', 'Nuremberg (Nürnberg)', 'Duisburg', 'Bochum', 'Wuppertal', 'Bielefeld', 'Bonn', 'Münster', 'Karlsruhe', 'Mannheim', 'Augsburg', 'Wiesbaden', 'Gelsenkirchen', 'Mönchengladbach', 'Braunschweig', 'Chemnitz', 'Kiel', 'Aachen', 'Halle (Saale)', 'Magdeburg', 'Freiburg im Breisgau', 'Krefeld', 'Lübeck', 'Oberhausen', 'Erfurt', 'Mainz', 'Rostock', 'Kassel', 'Hagen', 'Hamm', 'Saarbrücken', 'Mülheim an der Ruhr', 'Potsdam', 'Ludwigshafen am Rhein', 'Oldenburg', 'Leverkusen', 'Osnabrück', 'Solingen', 'Heidelberg', 'Herne', 'Neuss', 'Darmstadt', 'Paderborn', 'Regensburg', 'Ingolstadt', 'Würzburg', 'Fürth', 'Wolfsburg', 'Offenbach am Main', 'Ulm', 'Heilbronn', 'Pforzheim', 'Göttingen', 'Bottrop', 'Trier', 'Recklinghausen', 'Reutlingen', 'Bremerhaven', 'Koblenz', 'Bergisch Gladbach', 'Jena', 'Remscheid', 'Erlangen', 'Moers', 'Siegen', 'Hildesheim', 'Salzgitter']
     },{
         SpainCity : ['Madrid', 'Barcelona', 'Valencia', 'Sevilla', 'Zaragoza', 'Málaga', 'Las Palmas de Gran Canaria', 'Bilbao', 'Murcia', 'Valladolid', 'Córdoba', 'Palma de Mallorca', 'Vigo', 'Alicante', 'Gijón', 'Hospital et de Llobregat', 'Granada', 'La Coruña', 'Vitoria-Gasteiz', 'Badalona', 'Santa Cruzde (Tenerife)', 'Oviedo', 'Móstoles', 'Elche', 'Sabadell', 'Santander', 'Jérez de la Frontera', 'San Sebastián', 'Leganés', 'Almería', 'Cartagena', 'Tarrasa', 'Alcaláde Henares', 'Fuenlabrada', 'Pamplona', 'Burgos', 'Salamanca', 'Albacete', 'León', 'Getafe', 'Alcorcón', 'Cádiz', 'Huelva', 'Castellón de la Plana', 'Badajoz', 'Logroño', 'Santa Coloma de Gramanet', 'La Laguna', 'Lleida', 'Tarragona']
     },{
@@ -17,13 +17,13 @@ const CityArr = [ {
 ]
 
 let stateNames =  CityArr[0].AustraliaCity.sort().concat(
-                                            CityArr[1].CanadaCity.sort(),
-                                            CityArr[2].FranchCity.sort(),
-                                            CityArr[3].GarmanCity.sort(),
-                                            CityArr[4].SpainCity.sort(),
-                                            CityArr[5].UKCity.sort(),
-                                            CityArr[6].USACity.sort()
-                                            ).sort();
+                    CityArr[1].CanadaCity.sort(),
+                    CityArr[2].FranchCity.sort(),
+                    CityArr[3].GarmanCity.sort(),
+                    CityArr[4].SpainCity.sort(),
+                    CityArr[5].UKCity.sort(),
+                    CityArr[6].USACity.sort()
+                    ).sort();
 
 let flagAddress = {
     Australia:"https://flagpedia.net/data/flags/icon/256x192/au.webp",
@@ -65,7 +65,15 @@ let industryName = $('#industry_Name_ID').select2().val();
         showCountryName.textContent = countryName;
         showCityName.textContent = cityName;
         showIndustryName.textContent = industryName;
+        // $('#myTable_filter input').val(cityName).keyup();
+        // $('#myTable_filter input').click(this);
     }
+
+    show_hide_column();
+    var lastColCellsOnly = Array.prototype.slice.call(document.querySelectorAll('td:nth-child(8)', 'table'), 0); 
+    lastColCellsOnly.forEach(function (cell) { // iterate and hide
+        cell.textContent = cityName;
+    });
 })
 $('#reset').click(function(){
     $('#country_Name_ID').val(null).trigger('change');
@@ -76,6 +84,7 @@ $('#reset').click(function(){
     showCountryName.textContent = "N/A";
     showCityName.textContent = "N/A";
     showIndustryName.textContent = "N/A";
+    $('#myTable_filter input').val('').keyup();
 })
 
 $('#CONCON').click(function(){
@@ -94,34 +103,34 @@ for (let i = 0; i < countryNames.length; i++) {
 setInterval(function(){
     let countryName = $('#country_Name_ID').val();
 
-    if(countryName == "Australia"){
+    if(countryName == "Australia" && cityName != " "){
         let cities = CityArr[0].AustraliaCity;
         cityLoad(cities);
-    }else if(countryName == "Canada"){
+    }else if(countryName == "Canada" && cityName != " "){
         let cities = CityArr[1].CanadaCity;
         cityLoad(cities);
-    }else if(countryName == "France"){
+    }else if(countryName == "France" && cityName != " "){
         let cities = CityArr[2].FranchCity;
         cityLoad(cities);
-    }else if(countryName == "German"){
+    }else if(countryName == "German" && cityName != " "){
         let cities = CityArr[3].GarmanCity;
         cityLoad(cities);
-    }else if(countryName == "Newzeland"){
+    }else if(countryName == "Newzeland" && cityName != " "){
         let cities = CityArr[0].SpainCity;
         cityLoad(cities);
-    }else if(countryName == "Spain"){
+    }else if(countryName == "Spain" && cityName != " "){
         let cities = CityArr[4].SpainCity;
         cityLoad(cities);
-    }else if(countryName == "UK"){
+    }else if(countryName == "UK" && cityName != " "){
         let cities = CityArr[5].UKCity;
         cityLoad(cities);
-    }else if(countryName == "USA"){
+    }else if(countryName == "USA" && cityName != " "){
         let cities = CityArr[6].USACity;
         cityLoad(cities);
-    }else if(countryName == "Portugal"){
+    }else if(countryName == "Portugal" && cityName != " "){
         let cities = CityArr[0].AustraliaCity;
         cityLoad(cities);
-    }else if(countryName == "Sweden"){
+    }else if(countryName == "Sweden" && cityName != " "){
         let cities = CityArr[0].AustraliaCity;
         cityLoad(cities);
     }else{
@@ -131,9 +140,9 @@ setInterval(function(){
 
 
 function cityLoad(cities){
+    state_Name_ID.textContent = " ";
     for (let i = 0; i < cities.length; i++) {
         let boxDiv = document.createElement("option");
-        // boxDiv.className = "btn my-1 btn_city";
         boxDiv.textContent = cities[i];
         boxDiv.setAttribute('value', cities[i]);
         state_Name_ID.appendChild(boxDiv);
@@ -142,13 +151,12 @@ function cityLoad(cities){
 
 
 
-// for (let i = 0; i < stateNames.length; i++) {
-//     let boxDiv = document.createElement("option");
-//     // boxDiv.className = "btn my-1 btn_city";
-//     boxDiv.textContent = stateNames[i];
-//     boxDiv.setAttribute('value', stateNames[i]);
-//     state_Name_ID.appendChild(boxDiv);
-// }
+for (let i = 0; i < stateNames.length; i++) {
+    let boxDiv = document.createElement("option");
+    boxDiv.textContent = stateNames[i];
+    boxDiv.setAttribute('value', stateNames[i]);
+    state_Name_ID.appendChild(boxDiv);
+}
 
 
 
@@ -157,7 +165,6 @@ for (let i = 0; i < industryNames.length; i++) {
         industryNames[i] = industryNames[i].slice(0, 20) + "...";
     }
     let boxDiv = document.createElement("option");
-    // boxDiv.className = "btn my-1 btn_city";
     boxDiv.textContent = industryNames[i];
     boxDiv.setAttribute('value', industryNames[i]);
     industry_Name_ID.appendChild(boxDiv);
