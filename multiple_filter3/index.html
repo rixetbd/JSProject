@@ -16,19 +16,18 @@
     <style>
         #myTable tr td:nth-child(1),
         #myTable tr td:nth-child(3),
-        #myTable tr td:nth-child(5)
-        {
+        #myTable tr td:nth-child(5) {
             min-width: 200px !important;
         }
 
         #myTable tr td:nth-child(2),
         #myTable tr td:nth-child(4),
         #myTable tr td:nth-child(6),
-        #myTable tr td:nth-child(7)
-        {
-            min-width: 180px !important;
+        #myTable tr td:nth-child(7) {
+            min-width: 130px !important;
         }
-        .box_shadow_table{
+
+        .box_shadow_table {
             padding: 15px;
             box-shadow: inset 3px 3px 13.5px 0 #eeeeee;
             border-radius: 5px;
@@ -38,10 +37,14 @@
             border: 1px solid #aaa;
             border-radius: 25px;
         }
+
         .select2-container--default .select2-selection--single .select2-selection__rendered {
             font-size: 14px;
         }
-        .select2-container--default .select2-selection--single .select2-selection__arrow {right: 5px;}
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            right: 5px;
+        }
     </style>
 </head>
 
@@ -82,232 +85,222 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <h4>Selected Country</h4>
-                <img src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2017/08/facebook-skeleton.png" alt="" class="img-fluid" id="showCountryFlag" width="250" style="border-radius: 5px;">
+                <img src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2017/08/facebook-skeleton.png" alt=""
+                    class="img-fluid" id="showCountryFlag" width="250" style="border-radius: 5px;">
             </div>
 
-        <div class="col-md-12 my-3 d-flex justify-content-between">
-            <button class="btn btn_city" id="table_Name">Name <i class="fas fa-plus"></i></button>
-            <button class="btn btn_city" id="table_Title">Title <i class="fas fa-plus"></i></button>
-            <button class="btn btn_city" id="table_Email">Email <i class="fas fa-plus"></i></button>
-            <button class="btn btn_city" id="table_Phone">Phone <i class="fas fa-plus"></i></button>
-            <button class="btn btn_city" id="table_Company">Company <i class="fas fa-plus"></i></button>
-            <button class="btn btn_city" id="table_Company_Size">Company Size <i class="fas fa-plus"></i></button>
-            <button class="btn btn_city" id="table_Revenue">Revenue <i class="fas fa-plus"></i></button>
-            <button class="btn btn_city" id="table_City">City <i class="fas fa-plus"></i></button>
-            <button class="btn btn_city" id="table_URL">Website <i class="fas fa-plus"></i></button>
-            <button class="btn btn_city" id="table_refresh">Default <i class="fas fa-redo-alt"></i></button>
+            <div class="col-md-12 my-3 d-flex justify-content-between">
+                <button class="btn btn_city" id="table_Name">Name <i class="fas fa-plus"></i></button>
+                <button class="btn btn_city" id="table_Title">Title <i class="fas fa-plus"></i></button>
+                <button class="btn btn_city" id="table_Email">Email <i class="fas fa-plus"></i></button>
+                <button class="btn btn_city" id="table_Phone">Phone <i class="fas fa-plus"></i></button>
+                <button class="btn btn_city" id="table_Company">Company <i class="fas fa-plus"></i></button>
+                <button class="btn btn_city" id="table_Company_Size">Company Size <i class="fas fa-plus"></i></button>
+                <button class="btn btn_city" id="table_Revenue">Revenue <i class="fas fa-plus"></i></button>
+                <button class="btn btn_city" id="table_City">City <i class="fas fa-plus"></i></button>
+                <button class="btn btn_city" id="table_URL">Website <i class="fas fa-plus"></i></button>
+                <button class="btn btn_city" id="table_refresh">Default <i class="fas fa-redo-alt"></i></button>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 my-5" style="overflow-x:auto;">
+                <table class="table table-responsive" id="myTable">
+                    <thead>
+                        <th>Name</th>
+                        <th>Job Title</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Company</th>
+                        <th>Company Size</th>
+                        <th>Revenue</th>
+                        <th>City</th>
+                        <th>Website</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mark Cardy</td>
+                            <td>Owner</td>
+                            <td>mark*****@*********.com</td>
+                            <td>+16135******</td>
+                            <td>Cardy Legal Services</td>
+                            <td>11 to 15</td>
+                            <td>$6.7 M</td>
+                            <td>Kingston</td>
+                            <td>https://inmydefence.com/</td>
+                        </tr>
+                        <tr>
+                            <td>Luce Morrow</td>
+                            <td>Director</td>
+                            <td>l.morrow@*********.net</td>
+                            <td>+14503******</td>
+                            <td>Me Luce Morrow</td>
+                            <td>2 to 10</td>
+                            <td>$5.1 M</td>
+                            <td>Quebec</td>
+                            <td>https://lucemorrownotaire.com/</td>
+                        </tr>
+                        <tr>
+                            <td>Margot Poepjes</td>
+                            <td>Lawyer</td>
+                            <td>mpoepjeslaw@*********.com</td>
+                            <td>+1647******</td>
+                            <td>Margot Poepjes Family</td>
+                            <td>11 to 15</td>
+                            <td>$5.2 M</td>
+                            <td>Toronto</td>
+                            <td>https://margotpoepjes.com/</td>
+                        </tr>
+                        <tr>
+                            <td>Ryan McMackin</td>
+                            <td>Lawyer</td>
+                            <td>ryanmcmackin44@*********.com</td>
+                            <td>+16474******</td>
+                            <td>McMackin Law</td>
+                            <td>10 to 50</td>
+                            <td>$5 M</td>
+                            <td>Bowmanville</td>
+                            <td>https://mcmackinlaw.ca/contact/</td>
+                        </tr>
+                        <tr>
+                            <td>Edith Szilagyi</td>
+                            <td>Founder</td>
+                            <td>edith@*********.ca</td>
+                            <td>+16048******</td>
+                            <td>Nova Law Corporation</td>
+                            <td>2 to 10</td>
+                            <td>$5.1 M</td>
+                            <td>Port Moody</td>
+                            <td>https://novabc.ca/</td>
+                        </tr>
+                        <tr>
+                            <td>Mark McMackin</td>
+                            <td>Partner</td>
+                            <td>mark@*********.ca</td>
+                            <td>+14165******</td>
+                            <td>McMackin Lawyers</td>
+                            <td>10 to 15</td>
+                            <td>$5 M</td>
+                            <td>Toronto</td>
+                            <td>https://mcmackinlawyers.ca/</td>
+                        </tr>
+                        <tr>
+                            <td>Ken Strong</td>
+                            <td>Partner</td>
+                            <td>strong@*********.ca</td>
+                            <td>+15196******</td>
+                            <td>Strong Macdougal</td>
+                            <td>2 to 10</td>
+                            <td>$5 M</td>
+                            <td>Toronto</td>
+                            <td>https://municipallawyers.ca/</td>
+                        </tr>
+                        <tr>
+                            <td>John Watson</td>
+                            <td>Partner</td>
+                            <td>jwatson@*********.com</td>
+                            <td>+15196******</td>
+                            <td>John Watson</td>
+                            <td>11 to 15</td>
+                            <td>$6 M</td>
+                            <td>Toronto</td>
+                            <td>https://nicholsonsmith.com/</td>
+                        </tr>
+                        <tr>
+                            <td>Curtis Rutt</td>
+                            <td>Director</td>
+                            <td>curtis@*********.ca</td>
+                            <td>+17058******</td>
+                            <td>Bulwark Legal Services</td>
+                            <td>11 to 50</td>
+                            <td>$5 M</td>
+                            <td>Orangeville</td>
+                            <td>http://www.bulwarklegal.ca/</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Venegas</td>
+                            <td>Lawyer</td>
+                            <td>paula@*********.com</td>
+                            <td>+16047******</td>
+                            <td>Paula Venegas Law Corp.</td>
+                            <td>11 to 50</td>
+                            <td>$5.1 M</td>
+                            <td>Abbotsford</td>
+                            <td>https://paulavenegas.com/</td>
+                        </tr>
+                        <tr>
+                            <td>Richard Campbell</td>
+                            <td>Lawyer</td>
+                            <td>richard@*********.com</td>
+                            <td>+151988******</td>
+                            <td>Campbell Litigation</td>
+                            <td>11 to 50</td>
+                            <td>$5 M</td>
+                            <td>Waterloo</td>
+                            <td>https://petkerlaw.com/</td>
+                        </tr>
+                        <tr>
+                            <td>Carly Hills</td>
+                            <td>Partner</td>
+                            <td>carly@*********.ca</td>
+                            <td>+1519******</td>
+                            <td>PSH Lawyers</td>
+                            <td>11 to 50</td>
+                            <td>$5 M</td>
+                            <td>Cambridge</td>
+                            <td>https://pettittschwarz.com/</td>
+                        </tr>
+                        <tr>
+                            <td>Nicole Druckman</td>
+                            <td>Lawyer</td>
+                            <td>druckman@*********.ca</td>
+                            <td>+1506******</td>
+                            <td>M. MORLEY RINZLER - Delehanty Rinzler Druckman</td>
+                            <td>11 to 50</td>
+                            <td>$5.3 M</td>
+                            <td>Moncton</td>
+                            <td>https://www.drdlaw.ca/</td>
+                        </tr>
+                        <tr>
+                            <td>Nicholas Robinson</td>
+                            <td>Lawyer</td>
+                            <td>nick@*********.com</td>
+                            <td>+13065******</td>
+                            <td>Robinson Barristers</td>
+                            <td>11 to 50</td>
+                            <td>$5 M</td>
+                            <td>Toronto</td>
+                            <td>https://nprobinson.com/</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
         </div>
 
-        <div class="col-lg-12 col-md-12 col-sm-12 my-5" style="overflow-x:auto;">
-            <table class="table table-responsive" id="myTable">
-                <thead>
-                    <th>Name</th>
-                    <th>Job Title</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Company</th>
-                    <th>Company Size</th>
-                    <th>Revenue</th>
-                    <th>City</th>
-                    <th>Website</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Mark Cardy</td>
-                        <td>Owner</td>
-                        <td>mark*****@*********.com</td>
-                        <td>+16135******</td>
-                        <td>Cardy Legal Services</td>
-                        <td>11 to 15</td>
-                        <td>$6.7 M</td>
-                        <td>Kingston</td>
-                        <td>https://inmydefence.com/</td>
-                    </tr>
-                    <tr>
-                        <td>Heather McKnight</td>
-                        <td>Lawyer</td>
-                        <td>heather@*********.com</td>
-                        <td>+17054******</td>
-                        <td>McKnight Family Law</td>
-                        <td>10 to 50</td>
-                        <td>$5 M</td>
-                        <td>Barrie</td>
-                        <td>https://mcknight-family-law.business.site/</td>
-                    </tr>
-                    <tr>
-                        <td>Luce Morrow</td>
-                        <td>Director</td>
-                        <td>l.morrow@*********.net</td>
-                        <td>+14503******</td>
-                        <td>Me Luce Morrow, notaire</td>
-                        <td>2 to 10</td>
-                        <td>$5.1 M</td>
-                        <td>Quebec</td>
-                        <td>https://lucemorrownotaire.com/</td>
-                    </tr>
-                    <tr>
-                        <td>Margot Poepjes</td>
-                        <td>Lawyer</td>
-                        <td>mpoepjeslaw@*********.com</td>
-                        <td>+1647******</td>
-                        <td>Margot Poepjes Family Lawyer</td>
-                        <td>11 to 15</td>
-                        <td>$5.2 M</td>
-                        <td>Toronto</td>
-                        <td>https://margotpoepjes.com/</td>
-                    </tr>
-                    <tr>
-                        <td>Ryan McMackin</td>
-                        <td>Lawyer</td>
-                        <td>ryanmcmackin44@*********.com</td>
-                        <td>+16474******</td>
-                        <td>McMackin Law</td>
-                        <td>10 to 50</td>
-                        <td>$5 M</td>
-                        <td>Bowmanville</td>
-                        <td>https://mcmackinlaw.ca/contact/</td>
-                    </tr>
-                    <tr>
-                        <td>Edith Szilagyi</td>
-                        <td>Founder</td>
-                        <td>edith@*********.ca</td>
-                        <td>+16048******</td>
-                        <td>Nova Law Corporation</td>
-                        <td>2 to 10</td>
-                        <td>$5.1 M</td>
-                        <td>Port Moody</td>
-                        <td>https://novabc.ca/</td>
-                    </tr>
-                    <tr>
-                        <td>Mark McMackin</td>
-                        <td>Partner</td>
-                        <td>mark@*********.ca</td>
-                        <td>+14165******</td>
-                        <td>McMackin Lawyers</td>
-                        <td>10 to 15</td>
-                        <td>$5 M</td>
-                        <td>Toronto</td>
-                        <td>https://mcmackinlawyers.ca/</td>
-                    </tr>
-                    <tr>
-                        <td>Ken Strong</td>
-                        <td>Partner</td>
-                        <td>strong@*********.ca</td>
-                        <td>+15196******</td>
-                        <td>Strong Macdougal Oudekerk</td>
-                        <td>2 to 10</td>
-                        <td>$5 M</td>
-                        <td>Toronto</td>
-                        <td>https://municipallawyers.ca/</td>
-                    </tr>
-                    <tr>
-                        <td>John Watson</td>
-                        <td>Partner</td>
-                        <td>jwatson@*********.com</td>
-                        <td>+15196******</td>
-                        <td>John Watson</td>
-                        <td>11 to 15</td>
-                        <td>$6 M</td>
-                        <td>Toronto</td>
-                        <td>https://nicholsonsmith.com/</td>
-                    </tr>
-                    <tr>
-                        <td>Curtis Rutt</td>
-                        <td>Director</td>
-                        <td>curtis@*********.ca</td>
-                        <td>+17058******</td>
-                        <td>Bulwark Legal Services</td>
-                        <td>11 to 50</td>
-                        <td>$5 M</td>
-                        <td>Orangeville</td>
-                        <td>http://www.bulwarklegal.ca/</td>
-                    </tr>
-                    <tr>
-                        <td>Paula Venegas</td>
-                        <td>Lawyer</td>
-                        <td>paula@*********.com</td>
-                        <td>+16047******</td>
-                        <td>Paula Venegas Law Corp.</td>
-                        <td>11 to 50</td>
-                        <td>$5.1 M</td>
-                        <td>Abbotsford</td>
-                        <td>https://paulavenegas.com/</td>
-                    </tr>
-                    <tr>
-                        <td>Richard Campbell</td>
-                        <td>Lawyer</td>
-                        <td>richard@*********.com</td>
-                        <td>+151988******</td>
-                        <td>Campbell Litigation</td>
-                        <td>11 to 50</td>
-                        <td>$5 M</td>
-                        <td>Waterloo</td>
-                        <td>https://petkerlaw.com/</td>
-                    </tr>
-                    <tr>
-                        <td>Carly Hills</td>
-                        <td>Partner</td>
-                        <td>carly@*********.ca</td>
-                        <td>+1519******</td>
-                        <td>PSH Lawyers</td>
-                        <td>11 to 50</td>
-                        <td>$5 M</td>
-                        <td>Cambridge</td>
-                        <td>https://pettittschwarz.com/</td>
-                    </tr>
-                    <tr>
-                        <td>Nicole Druckman</td>
-                        <td>Lawyer</td>
-                        <td>druckman@*********.ca</td>
-                        <td>+1506******</td>
-                        <td>M. MORLEY RINZLER - Delehanty Rinzler Druckman</td>
-                        <td>11 to 50</td>
-                        <td>$5.3 M</td>
-                        <td>Moncton</td>
-                        <td>https://www.drdlaw.ca/</td>
-                    </tr>
-                    <tr>
-                        <td>Nicholas Robinson</td>
-                        <td>Lawyer</td>
-                        <td>nick@*********.com</td>
-                        <td>+13065******</td>
-                        <td>Robinson Barristers</td>
-                        <td>11 to 50</td>
-                        <td>$5 M</td>
-                        <td>Toronto</td>
-                        <td>https://nprobinson.com/</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-    </div>
-    </div>
 
 
 
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="js/variable.js"></script>
+        <script src="js/all_city.js"></script>
+        <script src="js/city_loop.js"></script>
+        <script src="js/table-filter.js"></script>
+        <script src="js/search.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="js/variable.js"></script>
-    <script src="js/all_city.js"></script>
-    <script src="js/city_loop.js"></script>
-    <script src="js/table-filter.js"></script>
-    <script src="js/search.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('#myTable').DataTable();
-        });
-        $(document).ready(function() {
-            $('#country_Name_ID').select2();
-            $('#state_Name_ID').select2();
-            $('#industry_Name_ID').select2();
-        });
-    </script>
+        <script>
+            $(document).ready(function () {
+                $('#myTable').DataTable();
+            });
+            $(document).ready(function () {
+                $('#country_Name_ID').select2();
+                $('#state_Name_ID').select2();
+                $('#industry_Name_ID').select2();
+            });
+        </script>
 
 </body>
 

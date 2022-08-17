@@ -16,13 +16,13 @@ const CityArr = [ {
     }
 ]
 
-let stateNames =  CityArr[0].AustraliaCity.concat(
-                                            CityArr[1].CanadaCity,
-                                            CityArr[2].FranchCity,
-                                            CityArr[3].GarmanCity,
-                                            CityArr[4].SpainCity,
-                                            CityArr[5].UKCity,
-                                            CityArr[6].USACity
+let stateNames =  CityArr[0].AustraliaCity.sort().concat(
+                                            CityArr[1].CanadaCity.sort(),
+                                            CityArr[2].FranchCity.sort(),
+                                            CityArr[3].GarmanCity.sort(),
+                                            CityArr[4].SpainCity.sort(),
+                                            CityArr[5].UKCity.sort(),
+                                            CityArr[6].USACity.sort()
                                             ).sort();
 
 let flagAddress = {
@@ -43,7 +43,6 @@ let countryNames = [" ",'Australia','Canada','France','German','Newzeland','Spai
 let industryNames = [" " , 'CANNABIST', 'CHRIOPRACTOR', 'DENTAL', 'E-COMMERCE', 'FOOTBALL CLUB', 'HVAC', 'LAW FIRM', 'OPTOMETRY', 'PHYSIOTHERAPY', 'PLASTIC SURGEONS', 'REAL ESTATE', 'VETERINARIANS'];
 
 countryNames.sort();
-stateNames.sort();
 industryNames.sort();
 
 let country_Name_ID = document.getElementById('country_Name_ID');
@@ -57,9 +56,9 @@ let showIndustryName = document.getElementById('showIndustryName');
 // $('#country_Name_ID').nextElementSibling.addClass('d-none');
 
 $('#filter').click(function(){
-    let countryName = $('#country_Name_ID').select2().val();
-    let cityName = $('#state_Name_ID').select2().val();
-    let industryName = $('#industry_Name_ID').select2().val();
+let countryName = $('#country_Name_ID').select2().val();
+let cityName = $('#state_Name_ID').select2().val();
+let industryName = $('#industry_Name_ID').select2().val();
 
     if(countryName != " " && cityName != " " && industryName != " "){    
         showCountryFlag.setAttribute('src', flagAddress[countryName]);
@@ -86,19 +85,70 @@ $('#CONCON').click(function(){
 for (let i = 0; i < countryNames.length; i++) {
     let boxDiv = document.createElement("option");
     // boxDiv.className = "btn my-1 btn_city";
-    boxDiv.textContent = countryNames[i];
+    boxDiv.innerHTML = countryNames[i];
     boxDiv.setAttribute('value', countryNames[i]);
     country_Name_ID.appendChild(boxDiv);
 }
 
 
-for (let i = 0; i < stateNames.length; i++) {
-    let boxDiv = document.createElement("option");
-    // boxDiv.className = "btn my-1 btn_city";
-    boxDiv.textContent = stateNames[i];
-    boxDiv.setAttribute('value', stateNames[i]);
-    state_Name_ID.appendChild(boxDiv);
+setInterval(function(){
+    let countryName = $('#country_Name_ID').val();
+
+    if(countryName == "Australia"){
+        let cities = CityArr[0].AustraliaCity;
+        cityLoad(cities);
+    }else if(countryName == "Canada"){
+        let cities = CityArr[1].CanadaCity;
+        cityLoad(cities);
+    }else if(countryName == "France"){
+        let cities = CityArr[2].FranchCity;
+        cityLoad(cities);
+    }else if(countryName == "German"){
+        let cities = CityArr[3].GarmanCity;
+        cityLoad(cities);
+    }else if(countryName == "Newzeland"){
+        let cities = CityArr[0].SpainCity;
+        cityLoad(cities);
+    }else if(countryName == "Spain"){
+        let cities = CityArr[4].SpainCity;
+        cityLoad(cities);
+    }else if(countryName == "UK"){
+        let cities = CityArr[5].UKCity;
+        cityLoad(cities);
+    }else if(countryName == "USA"){
+        let cities = CityArr[6].USACity;
+        cityLoad(cities);
+    }else if(countryName == "Portugal"){
+        let cities = CityArr[0].AustraliaCity;
+        cityLoad(cities);
+    }else if(countryName == "Sweden"){
+        let cities = CityArr[0].AustraliaCity;
+        cityLoad(cities);
+    }else{
+        let cities = stateNames;
+    }
+}, 1000)
+
+
+function cityLoad(cities){
+    for (let i = 0; i < cities.length; i++) {
+        let boxDiv = document.createElement("option");
+        // boxDiv.className = "btn my-1 btn_city";
+        boxDiv.textContent = cities[i];
+        boxDiv.setAttribute('value', cities[i]);
+        state_Name_ID.appendChild(boxDiv);
+    }
 }
+
+
+
+// for (let i = 0; i < stateNames.length; i++) {
+//     let boxDiv = document.createElement("option");
+//     // boxDiv.className = "btn my-1 btn_city";
+//     boxDiv.textContent = stateNames[i];
+//     boxDiv.setAttribute('value', stateNames[i]);
+//     state_Name_ID.appendChild(boxDiv);
+// }
 
 
 
