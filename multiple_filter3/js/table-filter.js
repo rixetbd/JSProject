@@ -24,21 +24,31 @@ function show_hide_column() {
     }
 }
 
-function signShowHide(sign){
-    if(sign.className == 'fas fa-plus'){
-        sign.setAttribute('class', "fas fa-minus");
-    }else{
-        sign.setAttribute('class', "fas fa-plus");
-    }
-}
+// function signShowHide(sign){
+//     if(sign.className == 'fas fa-plus'){
+//         sign.setAttribute('class', "fas fa-minus");
+//     }else{
+//         sign.setAttribute('class', "fas fa-plus");
+//     }
+// }
 
 
 table_Name.addEventListener('click', function () {
+
+    // if(document.getElementById("table_Name_IN").checked == true){
+    //     let checkData = "true";
+    //     console.log(checkData);
+    // }else{
+    //     let checkData = "False";
+    //     console.log(checkData);
+    //     // document.getElementById("table_Name_IN").checked == true;
+    // }
     
-    var sign = table_Name.querySelector('i');
-    signShowHide(sign);
+
+    // var sign = table_Name.querySelector('i');
+    // signShowHide(sign);
     
-    if(sign.className !== 'fas fa-plus'){
+    if(document.getElementById("table_Name_IN").checked !== true){
         show_hide_column();
         var lastColHeader = Array.prototype.slice.call(document.querySelectorAll('th:first-child', 'table'), 0); // get the header cell
         var lastColCells = Array.prototype.slice.call(document.querySelectorAll('td:first-child', 'table'), 0).concat(lastColHeader); // get the column cells, and add header
@@ -58,10 +68,8 @@ table_Name.addEventListener('click', function () {
 });
 
 table_Title.addEventListener('click', function () {
-    var sign = table_Title.querySelector('i');
-    signShowHide(sign);
 
-    if(sign.className !== 'fas fa-plus'){
+    if(document.getElementById("table_Title_IN").checked !== true){
         show_hide_column();
         var lastColHeader = Array.prototype.slice.call(document.querySelectorAll('th:nth-child(2)', 'table'), 0); // get the header cell
         var lastColCells = Array.prototype.slice.call(document.querySelectorAll('td:nth-child(2)', 'table'), 0).concat(lastColHeader); // get the column cells, and add header
@@ -79,9 +87,8 @@ table_Title.addEventListener('click', function () {
 });
 
 table_Email.addEventListener('click', function () {
-    var sign = table_Email.querySelector('i');
-    signShowHide(sign);
-    if(sign.className !== 'fas fa-plus'){
+    
+    if(document.getElementById("table_Email_IN").checked !== true){
         show_hide_column();
         var lastColHeader = Array.prototype.slice.call(document.querySelectorAll('th:nth-child(3)', 'table'), 0); // get the header cell
         var lastColCells = Array.prototype.slice.call(document.querySelectorAll('td:nth-child(3)', 'table'), 0).concat(lastColHeader); // get the column cells, and add header
@@ -100,10 +107,8 @@ table_Email.addEventListener('click', function () {
 });
 
 table_Phone.addEventListener('click', function () {
-    var sign = table_Phone.querySelector('i');
-    signShowHide(sign);
-
-    if(sign.className !== 'fas fa-plus'){
+    
+    if(document.getElementById("table_Phone_IN").checked !== true){
         show_hide_column();
         var lastColHeader = Array.prototype.slice.call(document.querySelectorAll('th:nth-child(4)', 'table'), 0); // get the header cell
         var lastColCells = Array.prototype.slice.call(document.querySelectorAll('td:nth-child(4)', 'table'), 0).concat(lastColHeader); // get the column cells, and add header
@@ -120,10 +125,8 @@ table_Phone.addEventListener('click', function () {
     }
 });
 table_Company.addEventListener('click', function () {
-    var sign = table_Company.querySelector('i');
-    signShowHide(sign);
 
-    if(sign.className !== 'fas fa-plus'){
+    if(document.getElementById("table_Company_IN").checked !== true){
         show_hide_column();
         var lastColHeader = Array.prototype.slice.call(document.querySelectorAll('th:nth-child(5)', 'table'), 0); // get the header cell
         var lastColCells = Array.prototype.slice.call(document.querySelectorAll('td:nth-child(5)', 'table'), 0).concat(lastColHeader); // get the column cells, and add header
@@ -141,10 +144,8 @@ table_Company.addEventListener('click', function () {
     
 });
 table_Company_Size.addEventListener('click', function () {
-    var sign = table_Company_Size.querySelector('i');
-    signShowHide(sign);
-
-    if(sign.className !== 'fas fa-plus'){
+    
+    if(document.getElementById("table_Company_Size_IN").checked !== true){
         show_hide_column();
         var lastColHeader = Array.prototype.slice.call(document.querySelectorAll('th:nth-child(6)', 'table'), 0); // get the header cell
         var lastColCells = Array.prototype.slice.call(document.querySelectorAll('td:nth-child(6)', 'table'), 0).concat(lastColHeader); // get the column cells, and add header
@@ -162,9 +163,8 @@ table_Company_Size.addEventListener('click', function () {
     
 });
 table_Revenue.addEventListener('click', function () {
-    var sign = table_Revenue.querySelector('i');
-    signShowHide(sign);
-    if(sign.className !== 'fas fa-plus'){
+    
+    if(document.getElementById("table_Revenue_IN").checked !== true){
         show_hide_column();
         var lastColHeader = Array.prototype.slice.call(document.querySelectorAll('th:nth-child(7)', 'table'), 0); // get the header cell
         var lastColCells = Array.prototype.slice.call(document.querySelectorAll('td:nth-child(7)', 'table'), 0).concat(lastColHeader); // get the column cells, and add header
@@ -182,10 +182,8 @@ table_Revenue.addEventListener('click', function () {
     
 });
 table_City.addEventListener('click', function () {
-    var sign = table_City.querySelector('i');
-    signShowHide(sign);
-
-    if(sign.className !== 'fas fa-plus'){
+    
+    if(document.getElementById("table_City_IN").checked !== true){
         show_hide_column();
         var lastColHeader = Array.prototype.slice.call(document.querySelectorAll('th:nth-child(8)', 'table'), 0); // get the header cell
         var lastColCells = Array.prototype.slice.call(document.querySelectorAll('td:nth-child(8)', 'table'), 0).concat(lastColHeader); // get the column cells, and add header
@@ -207,9 +205,8 @@ table_City.addEventListener('click', function () {
     
 });
 table_URL.addEventListener('click', function () {
-    var sign = table_URL.querySelector('i');
-    signShowHide(sign);
-    if(sign.className !== 'fas fa-plus'){
+    
+    if(document.getElementById("table_URL_IN").checked !== true){
         show_hide_column();
         var lastColHeader = Array.prototype.slice.call(document.querySelectorAll('th:nth-child(9)', 'table'), 0); // get the header cell
         var lastColCells = Array.prototype.slice.call(document.querySelectorAll('td:nth-child(9)', 'table'), 0).concat(lastColHeader); // get the column cells, and add header
@@ -229,7 +226,7 @@ table_URL.addEventListener('click', function () {
 
 table_refresh.addEventListener('click', ()=>{
 
-    table_Name.querySelector('i').setAttribute('class', "fas fa-plus");
+    document.getElementById("table_URL_IN").checked = true;
     table_Title.querySelector('i').setAttribute('class', "fas fa-plus");
     table_Email.querySelector('i').setAttribute('class', "fas fa-plus");
     table_Phone.querySelector('i').setAttribute('class', "fas fa-plus");
