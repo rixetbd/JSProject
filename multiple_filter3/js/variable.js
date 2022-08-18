@@ -1,3 +1,4 @@
+
 const CityArr = [{
         AustraliaCity: [" ", 'Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Gold Coast–Tweed Heads', 'Newcastle–Maitland', 'Canberra–Queanbeyan', 'Sunshine Coast', 'Central Coast', 'Wollongong', 'Geelong', 'Hobart', 'Townsville', 'Cairns', 'Toowoomba', 'Darwin', 'Ballarat', 'Bendigo', 'Albury–Wodonga', 'Launceston', 'Mackay', 'Rockhampton', 'Melton', 'Bunbury', 'Coffs Harbour', 'Bundaberg', 'Wagga Wagga', 'Hervey Bay', 'Shepparton–Mooroopna', 'Mildura–Wentworth', 'Port Macquarie', 'Gladstone–Tannum Sands', 'Tamworth', 'Traralgon–Morwell', 'Warragul–Drouin', 'Bowral–Mittagong', 'Orange', 'Busselton', 'Dubbo', 'Nowra–Bomaderry', 'Bathurst', 'Geraldton', 'Warrnambool', 'Albany'],
     },
@@ -78,7 +79,7 @@ let flagAddress = {
 
 
 let countryNames = [" ", 'Australia', 'Canada', 'France', 'German', 'Newzeland', 'Spain', 'UK', 'USA', 'Portugal', 'Sweden'];
-let industryNames = [" ", 'CANNABIST', 'CHRIOPRACTOR', 'DENTAL', 'E-COMMERCE', 'FOOTBALL CLUB', 'HVAC', 'LAW FIRM', 'OPTOMETRY', 'PHYSIOTHERAPY', 'PLASTIC SURGEONS', 'REAL ESTATE', 'VETERINARIANS'];
+let industryNames = [" ", 'CANNABIST', 'CHRIOPRACTOR', 'DENTAL', 'E-COMMERCE', 'HVAC', 'LAW FIRM', 'OPTOMETRY', 'PHYSIOTHERAPY', 'PLASTIC SURGEONS', 'REAL ESTATE', 'SPORTS MEDICINE', 'VETERINARIANS'];
 
 countryNames.sort();
 industryNames.sort();
@@ -90,6 +91,38 @@ let showCountryFlag = document.getElementById('showCountryFlag');
 let showCountryName = document.getElementById('showCountryName');
 let showCityName = document.getElementById('showCityName');
 let showIndustryName = document.getElementById('showIndustryName');
+
+for (let i = 0; i < countryNames.length; i++) {
+    let boxDiv = document.createElement("option");
+    // boxDiv.className = "btn my-1 btn_city";
+    boxDiv.innerHTML = countryNames[i];
+    boxDiv.setAttribute('value', countryNames[i]);
+    country_Name_ID.appendChild(boxDiv);
+}
+
+
+// stateNames
+function cityLoad(cities) {
+    // state_Name_ID.textContent = " ";
+    for (let i = 0; i < cities.length; i++) {
+        let boxDiv = document.createElement("option");
+        boxDiv.textContent = cities[i];
+        boxDiv.setAttribute('value', cities[i]);
+        state_Name_ID.appendChild(boxDiv);
+    }
+}
+
+// cityLoad(stateNames);
+
+for (let i = 0; i < industryNames.length; i++) {
+    if (industryNames[i].length > 20) {
+        industryNames[i] = industryNames[i].slice(0, 20) + "...";
+    }
+    let boxDiv = document.createElement("option");
+    boxDiv.textContent = industryNames[i];
+    boxDiv.setAttribute('value', industryNames[i]);
+    industry_Name_ID.appendChild(boxDiv);
+}
 
 // $('#country_Name_ID').nextElementSibling.addClass('d-none');
 
@@ -110,9 +143,13 @@ $('#filter').click(function () {
             cell.textContent = cityName;
         });
         $('#myTable_filter input').val(industryName).keyup();
+        var lastColHeader = Array.prototype.slice.call(document.querySelectorAll(`th:nth-child(${randomValue})`, 'table'), 0); // get the header cell
+        var randomValue = Math.floor(Math.random()*8)+1;
+        lastColHeader.click();
     }
 
 })
+
 $('#reset').click(function () {
     $('#country_Name_ID').val(null).trigger('change');
     $('#state_Name_ID').val(null).trigger('change');
@@ -125,30 +162,6 @@ $('#reset').click(function () {
     $('#myTable_filter input').val('').keyup();
 })
 
-// $('.CONCON1').click(function () {
-//     $('#country_Name_ID').hide();
-//     $('#country_Name_ID').select2().hide();
-//     $('.select2').hide();
-// })
-// $('.CONCON2').click(function () {
-//     $('#state_Name_ID').hide();
-//     $('#state_Name_ID').select2().hide();
-//     $('.select2').hide();
-// })
-// $('.CONCON3').click(function () {
-//     $('#industry_Name_ID').hide();
-//     $('#industry_Name_ID').select2().hide();
-//     $('.select2').hide();
-// })
-
-
-for (let i = 0; i < countryNames.length; i++) {
-    let boxDiv = document.createElement("option");
-    // boxDiv.className = "btn my-1 btn_city";
-    boxDiv.innerHTML = countryNames[i];
-    boxDiv.setAttribute('value', countryNames[i]);
-    country_Name_ID.appendChild(boxDiv);
-}
 
 $('#country_Name_ID').select2().change(function(){
 
@@ -193,26 +206,3 @@ $('#country_Name_ID').select2().change(function(){
         // console.log(stateNames.sort());
     }
 });
-
-// stateNames
-function cityLoad(cities) {
-    // state_Name_ID.textContent = " ";
-    for (let i = 0; i < cities.length; i++) {
-        let boxDiv = document.createElement("option");
-        boxDiv.textContent = cities[i];
-        boxDiv.setAttribute('value', cities[i]);
-        state_Name_ID.appendChild(boxDiv);
-    }
-}
-
-// cityLoad(stateNames);
-
-for (let i = 0; i < industryNames.length; i++) {
-    if (industryNames[i].length > 20) {
-        industryNames[i] = industryNames[i].slice(0, 20) + "...";
-    }
-    let boxDiv = document.createElement("option");
-    boxDiv.textContent = industryNames[i];
-    boxDiv.setAttribute('value', industryNames[i]);
-    industry_Name_ID.appendChild(boxDiv);
-}

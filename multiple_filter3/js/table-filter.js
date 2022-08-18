@@ -24,6 +24,13 @@ function show_hide_column() {
     }
 }
 
+
+var lastColHeader = Array.prototype.slice.call(document.querySelectorAll('th:nth-child(10)', 'table'), 0); // get the header cell
+var lastColCells = Array.prototype.slice.call(document.querySelectorAll('td:nth-child(10)', 'table'), 0).concat(lastColHeader); // get the column cells, and add header
+lastColCells.forEach(function (cell) { // iterate and hide
+    cell.style.display = 'none';
+});
+
 // function signShowHide(sign){
 //     if(sign.className == 'fas fa-plus'){
 //         sign.setAttribute('class', "fas fa-minus");
@@ -35,19 +42,6 @@ function show_hide_column() {
 
 table_Name.addEventListener('click', function () {
 
-    // if(document.getElementById("table_Name_IN").checked == true){
-    //     let checkData = "true";
-    //     console.log(checkData);
-    // }else{
-    //     let checkData = "False";
-    //     console.log(checkData);
-    //     // document.getElementById("table_Name_IN").checked == true;
-    // }
-    
-
-    // var sign = table_Name.querySelector('i');
-    // signShowHide(sign);
-    
     if(document.getElementById("table_Name_IN").checked !== true){
         show_hide_column();
         var lastColHeader = Array.prototype.slice.call(document.querySelectorAll('th:first-child', 'table'), 0); // get the header cell
@@ -62,9 +56,7 @@ table_Name.addEventListener('click', function () {
         lastColCells.forEach(function (cell) { // iterate and hide
             cell.style.removeProperty('display');
         });
-    }
-
-    
+    }  
 });
 
 table_Title.addEventListener('click', function () {
@@ -224,25 +216,17 @@ table_URL.addEventListener('click', function () {
     
 });
 
+
+// --------------------------------------------------------------------------------------
+
 table_refresh.addEventListener('click', ()=>{
-
-    document.getElementById("table_URL_IN").checked = true;
-    table_Title.querySelector('i').setAttribute('class', "fas fa-plus");
-    table_Email.querySelector('i').setAttribute('class', "fas fa-plus");
-    table_Phone.querySelector('i').setAttribute('class', "fas fa-plus");
-    table_Company.querySelector('i').setAttribute('class', "fas fa-plus");
-    table_Company_Size.querySelector('i').setAttribute('class', "fas fa-plus");
-    table_Revenue.querySelector('i').setAttribute('class', "fas fa-plus");
-    table_City.querySelector('i').setAttribute('class', "fas fa-plus");
-    table_URL.querySelector('i').setAttribute('class', "fas fa-plus");
-
-    let hideTH = document.querySelectorAll('th');
-    for (let i = 0; i < hideTH.length; i++) {
-        hideTH[i].style.removeProperty('display');
-    }
-    let hideTD = document.querySelectorAll('td');
-    for (let i = 0; i < hideTD.length; i++) {
-        hideTD[i].style.removeProperty('display');
-    }
-
+    if(document.getElementById("table_URL_IN").checked !== true){$('#table_URL').click();}
+    if(document.getElementById("table_Name_IN").checked !== true){$('#table_Name').click();}
+    if(document.getElementById("table_Title_IN").checked !== true){$('#table_Title').click();}
+    if(document.getElementById("table_Email_IN").checked !== true){$('#table_Email').click();}
+    if(document.getElementById("table_Phone_IN").checked !== true){$('#table_Phone').click();}
+    if(document.getElementById("table_Company_IN").checked !== true){$('#table_Company').click();}
+    if(document.getElementById("table_Company_Size_IN").checked !== true){$('#table_Company_Size').click();}
+    if(document.getElementById("table_Revenue_IN").checked !== true){$('#table_Revenue').click();}
+    if(document.getElementById("table_City_IN").checked !== true){$('#table_City').click();}
 });
