@@ -1,0 +1,70 @@
+.countdown__item,
+.corner-box {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 2px solid #105252;
+  padding: 18px 20px;
+  position: relative;
+  z-index: 1;
+}
+.countdown__item.active, .countdown__item:hover,
+.corner-box.active,
+.corner-box:hover {
+  border-color: #14C2A3;
+}
+.countdown__item.active::before, .countdown__item:hover::before,
+.corner-box.active::before,
+.corner-box:hover::before {
+  width: 0 !important;
+}
+.countdown__item.active::after, .countdown__item:hover::after,
+.corner-box.active::after,
+.corner-box:hover::after {
+  height: 0 !important;
+}
+.countdown__item::before, .countdown__item::after,
+.corner-box::before,
+.corner-box::after {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  background: #0e2230;
+  z-index: -1;
+}
+.countdown__item::before,
+.corner-box::before {
+  width: calc(102% - 3rem);
+  height: calc(100% + 4px);
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.countdown__item::after,
+.corner-box::after {
+  height: calc(110% - 3rem);
+  width: calc(100% + 4px);
+  left: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.countdown__item.st2::before,
+.corner-box.st2::before {
+  width: calc(105% - 3rem);
+  height: calc(100% + 4px);
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.countdown__item.st2:hover::before,
+.corner-box.st2:hover::before {
+  width: 0;
+}
+
+/*# sourceMappingURL=hover.css.map */

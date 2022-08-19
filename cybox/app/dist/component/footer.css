@@ -1,0 +1,109 @@
+#footer .footer-main {
+  padding: 88px 0 80px;
+  text-align: center;
+  position: relative;
+  background: #141A31;
+}
+#footer .footer-main .bg1,
+#footer .footer-main .bg2 {
+  position: absolute;
+}
+#footer .footer-main .bg1 {
+  top: 0;
+  left: 8%;
+}
+#footer .footer-main .bg2 {
+  bottom: 0;
+  right: 10%;
+}
+#footer .footer-main .widget-social {
+  margin-bottom: 41px;
+}
+#footer .footer-main .heading {
+  font-size: 32px;
+  line-height: 1.375;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+  letter-spacing: 0;
+}
+#footer .footer-main p {
+  text-transform: capitalize;
+}
+#footer .footer-main #subscribe-form {
+  max-width: 633px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 48px;
+  height: 64px;
+}
+#footer .footer-bottom {
+  margin-top: 1px;
+  padding: 17px 0 15px;
+  background: #141A31;
+}
+#footer .footer-bottom .wrap-fx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#footer .footer-bottom .wrap-fx .Copyright p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.57;
+  text-transform: capitalize;
+}
+#footer .footer-bottom .wrap-fx .list {
+  display: flex;
+}
+#footer .footer-bottom .wrap-fx .list li {
+  margin-left: 24px;
+}
+#footer .footer-bottom .wrap-fx .list li a {
+  font-size: 14px;
+  line-height: 1.57;
+}
+
+#subscribe-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#subscribe-form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  letter-spacing: 0;
+  height: 64px;
+  border: none;
+  background: #14C2A3;
+  text-transform: capitalize;
+  font-weight: 700;
+  width: 141px;
+}
+#subscribe-form button.tf-button::before {
+  background: #fff;
+}
+#subscribe-form button:hover {
+  color: #fff;
+  background: transparent;
+}
+#subscribe-form input {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(34, 183, 143, 0.5);
+  width: 74.5%;
+  padding-left: 18px;
+}
+#subscribe-form input::placeholder {
+  text-transform: capitalize;
+}
+#subscribe-form input:focus {
+  border-color: #14C2A3;
+}
+
+/*# sourceMappingURL=footer.css.map */

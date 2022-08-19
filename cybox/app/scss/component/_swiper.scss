@@ -1,0 +1,284 @@
+@use '../abstracts/' as *;
+.swiper-container {
+    &.hv2 {
+        padding: 35px 25px;
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+}
+
+.swiper.mySwiper {
+    width: 1410px;
+}
+.swiper.mySwiper2 {
+    transform: translateX(0);
+}
+.swiper.mySwiper1 {
+    transform: translateX(180px);
+    margin-bottom: 30px;
+}
+
+.swiper.mySwiper3,
+.swiper.mySwiper4 {
+    img {
+        width: 100%;
+    }
+}
+
+.swiper.mySwiper3 {
+    transform: translateX(-138px);
+    margin-bottom: $mg32;
+}
+
+.swiper.mySwiper4 {
+    transform: translateX(46px);
+}
+
+
+.swiper.mySwiper2,
+.swiper.mySwiper1 {
+    overflow: visible;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        min-width: 290px;
+        min-height: 290px;
+    }
+    &:hover {
+        cursor: e-resize;
+    }
+}
+.swiper.sl-roadmap2,
+.swiper.sl-roadmap,
+.swiper.mySwiper {
+    overflow: visible;
+}
+.swiper.sl-roadmap2 {
+    width: 1594px;
+}
+.swiper.sl-roadmap {
+    width: 1329px;
+    transform: translateX(1px);
+}
+
+.button-fx {
+    @include flex2;
+    .btn-prev-team, 
+    .btn-next-team,
+    .btn-prev,
+    .btn-next {
+        @include transition3;
+        @include flex(center,center);
+        min-width: 48px;
+        min-height: 48px;
+        background: transparent;
+        margin-right: 17px;
+        padding: 0;
+        line-height: 20px;
+        border: 1px solid $bg-2;
+        &.active,
+        &:hover {
+            background: $bg-2;
+        }
+        i {
+            font-size: 30px;
+            font-weight: 100;
+            color: $white;
+        }
+    }
+}
+
+.btn-prev-team, 
+.btn-next-team,
+.btn-prev,
+.btn-next {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.tf-team {
+    .swiper-button-next,
+    .swiper-button-prev {
+        opacity: 0;
+    }
+}
+
+.sl-post2 {
+    .post-item {
+        min-height: 580px;
+        .content-item {
+            height: 202px;
+        }
+    }
+}
+
+
+.sl-post3 {
+    margin-top: -65px;
+    .swiper-button-next {
+        position: absolute;
+        top: 30px;
+        right: 10px;
+    }
+    .swiper-button-prev {
+        position: absolute;
+        top: 30px;
+        right: 74px;
+        left: auto;
+    }
+    &.hv2 {
+        padding: 100px 25px 35px;
+    }
+}
+.btn-style {
+    .swiper-button-prev ,
+    .swiper-button-next {
+        @include flex(center,center);
+        min-width: 48px;
+        min-height: 48px;
+        background: transparent;
+        border: 1px solid $bg-2;
+        margin-right: 15px;
+        padding: 0;
+        &.active,
+        &:hover {
+            background: $bg-2;
+        }
+        &::after {
+            font-size: 30px;
+            font-weight: 100;
+        }
+    }
+}
+
+.sl-roadmap2 {
+    .swiper-button-prev ,
+    .swiper-button-next {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+}
+
+.swiper-button-next.swiper-button-disabled, 
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 0.8;
+    cursor: pointer;
+    pointer-events: fill;
+}
+
+.btn-next-main {
+    @include topcenter;
+    position: absolute;
+    right: 20px;
+}
+
+.btn-prev-main {
+    position: absolute;
+    left: 20px;
+    @include topcenter;
+}
+
+.btn-next-main,
+.btn-prev-main {
+    @include transition3;
+    @include flex(center,center);
+    min-width: 80px;
+    min-height: 80px;
+    background: transparent;
+    padding: 0;
+    line-height: 20px;
+    border: 1px solid $color-hover;
+    z-index: 9;
+    border-radius: 50%;
+    i {
+        font-size: 30px;
+        color: $white;
+    }
+    &:hover {
+        background: $color-hover;
+    }
+    &.swiper-button-disabled {
+        background: $color-hover;
+    }
+}
+.page-title {
+    .btn-next-main,
+    .btn-prev-main {
+        opacity: 0;
+    }
+    &:hover {
+        .btn-next-main,
+        .btn-prev-main {
+            opacity: 1;
+        }
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    &.swiper-button-disabled {
+        background: $color-hover;
+    }
+}
+
+.btn-next,
+.btn-prev {
+    &.swiper-button-disabled {
+        background: $color-hover;
+    }
+}
+
+.button-next-team,
+.button-prev-team {
+    &.swiper-button-disabled {
+        background: $color-hover;
+    }
+}
+.btn-next-team,
+.btn-prev-team {
+    &.swiper-button-disabled {
+        background: $color-hover; 
+    }
+}
+
+.sl-roadmap2 {
+    .swiper-button-prev,
+    .swiper-button-next {
+        @include transition3;
+        &::after,
+        &::before {
+            @include transition3;
+        }
+        &.swiper-button-disabled {
+            border: 1px solid $color-hover;
+        }
+    }
+}
+
+.swiper-button-disabled {
+    opacity: 1;
+}
+
+.page-title {
+    .swiper-pagination { 
+        opacity: 0;
+        visibility: hidden;
+        bottom: 50px;
+        @include flex(center,center);
+        position: relative;
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 1px solid $color-hover;
+            margin: 0 5px;
+            background: transparent;
+            &.swiper-pagination-bullet-active {
+                background: $color-hover;
+            }
+        }
+    }
+}

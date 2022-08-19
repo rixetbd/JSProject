@@ -1,0 +1,190 @@
+@use '../abstracts/' as *;
+
+#main-nav-mobi {
+    @include translateY0;
+    display: block ;
+    margin: 0 auto;
+    width: 100%;
+    left: 0;
+    z-index: 9999;
+    box-shadow: 0 0 50px 10px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0 0 50px 10px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 0 50px 10px rgba(0,0,0,.3);
+    padding-left: 0;
+    position: absolute;
+    top: 100%;
+    overflow-y: auto;
+    background: $white;
+    max-height: 60vh;
+    ul {
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 0;
+            cursor: pointer;
+            padding: 0;
+            border-top: 1px solid rgba(2,14,40,0.2);
+            position: relative;
+        }
+        li >ul >li:first-child{
+            border-top: 1px solid rgba(2,14,40,0.2);
+        }
+    }
+    ul > li > a {
+        @include transition3;
+        display: inline-block;
+        padding: 12px 20px;
+        color: $bgr-body;
+        position: relative;
+    }
+    .sub-menu li a {
+        padding-left: 40px;
+    }
+    ul li:first-child {
+        border-top: 0px;
+    }
+    ul ul li.current-item a,
+    ul > li.current-menu-item > a,
+    ul > li > a:hover {
+    color: $color-hover;
+    }
+
+    .menu-item-has-children .arrow {
+        @include transition3;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 20px;
+        line-height: 48px;
+        position: absolute;
+        right: 15px;
+        text-align: center;
+        top: 2px;
+        width: 48px;
+    }
+    .menu-item-has-children .arrow:before {
+        font-family: "Font Awesome 5 Pro";
+        content: "\f107";
+        color: $bgr-body;
+    }
+
+    .menu-item-has-children.current-menu-item .arrow:before {
+        color: $color-hover;
+    }
+}
+
+/* Mobile Menu Button */
+.mobile-button {
+    @include transition3;
+    display: none;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: 50%;
+    right: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    &:before,
+    &:after,
+    span {
+    background-color: #fff;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    }
+    &:before,
+    &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    }
+    span {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        top: 50%;
+        overflow: hidden;
+        text-indent: 200%;
+    }
+    &:before {
+        -webkit-transform: translate3d(0, -7px, 0);
+        -moz-transform: translate3d(0, -7px, 0);
+        transform: translate3d(0, -7px, 0);
+    }
+    &:after {
+        -webkit-transform: translate3d(0, 7px, 0);
+        -moz-transform: translate3d(0, 7px, 0);
+        transform: translate3d(0, 7px, 0);
+    }
+    &.active span {
+        opacity: 0;
+    }
+    &.active:before {
+        -webkit-transform: rotate3d(0, 0, 1, 45deg);
+        -moz-transform: rotate3d(0, 0, 1, 45deg);
+        transform: rotate3d(0, 0, 1, 45deg);
+    }
+    &.active:after {
+        -webkit-transform: rotate3d(0, 0, 1, -45deg);
+        -moz-transform: rotate3d(0, 0, 1, -45deg);
+        transform: rotate3d(0, 0, 1, -45deg);
+    }
+}
+/* Sub Menu */
+#main-nav .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: $white;
+    box-shadow: $box-shadow;
+    border-radius: 2px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+    padding: 5px 0;
+    li {
+        margin-right: 0;
+        a {
+            padding: 10px 20px;
+            color: $bgr-body;
+            opacity: 0.9;
+        }
+        &:hover .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            -webkit-transform: translateY(0);
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -o-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+    li.current-item a{
+        color: $color-hover;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,104 @@
+@use '../abstracts/' as *;
+#footer {
+    .footer-main {
+        padding: 88px 0 80px;
+        text-align: center;
+        position: relative;
+        background: $bg-3;
+        .bg1,
+        .bg2 {
+            position: absolute;
+        }
+        .bg1 {
+            top: 0;
+            left: 8%;
+        }
+        .bg2 {
+            bottom: 0;
+            right: 10%;
+        }
+        .widget-social {
+            margin-bottom: 41px;
+        }
+        .heading {
+            font-size: 32px;
+            line-height: 1.375;
+            text-transform: capitalize;
+            margin-bottom: 16px;
+            letter-spacing: 0;
+        }
+        p {
+            text-transform: capitalize;
+        }
+        #subscribe-form {
+            max-width: 633px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 48px;
+            height: 64px;
+        }
+    }
+    .footer-bottom {
+        margin-top: 1px;
+        padding: 17px 0 15px;
+        background: $bg-3;
+        .wrap-fx {
+            @include flex(center,space-between);
+            flex-wrap: wrap;
+            .Copyright {
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                    line-height: 1.57;
+                    text-transform: capitalize;
+                }
+            }
+            .list {
+                @include flex2;
+                li {
+                    margin-left: 24px;
+                    a {
+                        font-size: 14px;
+                        line-height: 1.57;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#subscribe-form {
+    position: relative;
+    @include flex(center,flex-start);
+    button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        letter-spacing: 0;
+        height: 64px;
+        border: none;
+        background: $bg-2;
+        text-transform: capitalize;
+        font-weight: 700;
+        width: 141px;
+        &.tf-button::before {
+            background: $white;
+        }
+        &:hover {
+            color: #fff;
+            background: transparent
+        }
+    }
+    input {
+        @include transition3;
+        border: 2px solid rgba(34, 183, 143, 0.5);
+        width: 74.5%;;
+        padding-left: 18px;
+        &::placeholder {
+            text-transform: capitalize;
+        }
+        &:focus {
+            border-color: $color-hover;
+        }
+    }
+}

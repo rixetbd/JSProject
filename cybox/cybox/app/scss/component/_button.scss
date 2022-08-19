@@ -1,0 +1,243 @@
+@use '../abstracts/' as *;
+
+.page-title {
+    .wrap-btn {
+        @include flex(center,flex-start);
+        .tf-button,
+        .tf-button-st2 {
+            height: 64px;
+            line-height: 64px;
+            padding: 0 34px;
+            text-align: center;
+        }
+        .tf-button-st2 {
+            margin-right: 18px;
+            padding: 0px 32px;
+            outline: none;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+}
+
+    .page-title {
+        .wrap-btn {
+            &.style2 {
+                .tf-button {
+                    padding: 0px 34px;
+                }
+                .tf-button-st2 {
+                    margin-right: 18px;
+                }
+            }
+        }
+    }
+
+.tf-button {
+    @include transition3;
+    position: relative;
+    display: inline-block;
+    background: transparent;
+    font-family: $font-main;
+    color: $white;
+    font-weight: $font-w7;
+    text-transform: uppercase;
+    padding: 9px 32px;
+    height: 48px;
+    border: none;
+    .boder-fade {
+        position: absolute;
+        transition: all 0.1s;
+        border: 2px solid $bg-2;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        left: 0;
+        top: 0;
+    }
+    .effect {
+        display: block;
+        &::before, 
+        &::after {
+            content:"";
+            width:2px;
+            height:0;
+            position: absolute;
+            transition: all 0.2s linear;
+            background: #fff;
+        }
+    }
+    &::before, 
+    &::after {
+        content:"";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        transition: all 0.2s linear;
+        background: #fff;
+    }
+    &:hover {
+        color: $white;
+        &::before, 
+        &::after{
+            width: 100%;
+        }
+        .effect {
+            &::before,
+            &::after{
+                height: 100%;
+            }
+        }
+    }
+    &.btn-effect {
+        &::before{
+            left: 50%;
+            top: 0;
+            transition-duration: 0.3s;
+            z-index: 1;
+        }
+        &::after{
+            left: 50%;
+            bottom: 0;
+            transition-duration: 0.3s;
+            z-index: 1;
+        }
+        .effect {
+            &::before{
+                left: 0;
+                top: 50%;
+                transition-duration: 0.3s;
+            }
+            &::after{
+                right: 0;
+                top: 50%;
+                transition-duration: 0.3s;
+            }
+        }
+        &:hover {
+            &::after,
+            &::before {
+                left: 0;
+            }
+            .effect {
+                &::after,
+                &::before {
+                    top: 0;
+                } 
+            }
+        }
+    } 
+    &.st2 {
+        height: 64px;
+        line-height: 64px;
+        padding: 0 33px
+    }
+    &.st3 {
+        height: 66px;
+        line-height: 64px;
+        padding: 0 33px
+    }
+}
+
+.tf-button-st2 {
+    @include transition3;
+    position: relative;
+    display: inline-block;
+    background: $color-hover;
+    font-family: $font-main;
+    color: $white;
+    font-weight: $font-w7;
+    text-transform: uppercase;
+    padding: 10px 32px;
+    height: 64px;
+    border: none;
+    .boder-fade {
+        position: absolute;
+        transition: all 0.1s;
+        border: 2px solid $bg-2;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        left: 0;
+        top: 0;
+    }
+    .effect {
+        display: block;
+        &::before, 
+        &::after {
+            content:"";
+            width:2px;
+            height:0;
+            position: absolute;
+            transition: all 0.2s linear;
+            background: #fff;
+        }
+    }
+    &::before, 
+    &::after {
+        content:"";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        transition: all 0.2s linear;
+        background: #fff;
+    }
+    &:hover {
+        color: $white;
+        background: transparent;
+        &::before, 
+        &::after{
+            width: 100%;
+        }
+        .effect {
+            &::before,
+            &::after{
+                height: 100%;
+            }
+        }
+    }
+    &.btn-effect {
+        &::before{
+            left: 50%;
+            top: 0;
+            transition-duration: 0.3s;
+            z-index: 1;
+        }
+        &::after{
+            left: 50%;
+            bottom: 0;
+            transition-duration: 0.3s;
+            z-index: 1;
+        }
+        .effect {
+            &::before{
+                left: 0;
+                top: 50%;
+                transition-duration: 0.3s;
+            }
+            &::after{
+                right: 0;
+                top: 50%;
+                transition-duration: 0.3s;
+            }
+        }
+        &:hover {
+            &::after,
+            &::before {
+                left: 0;
+            }
+            .effect {
+                &::after,
+                &::before {
+                    top: 0;
+                } 
+            }
+        }
+    } 
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    @include transition3;
+}

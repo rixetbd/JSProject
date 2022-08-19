@@ -1,0 +1,151 @@
+@use '../abstracts/' as *;
+
+.header.main {
+    background: transparent;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    height: 108px;
+    background-color: transparent;
+    @include flex(center,space-between);   
+    #site-header-inner {
+        @include flex(center,flex-start);
+        width: $w100;
+        .tf-button {
+            margin-left: auto;
+        }
+    }
+    .main-nav {
+        position: absolute;
+        left: 31%;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        padding-left: 4px;
+        letter-spacing: 0.6px
+    }
+}
+
+.inner-page {
+    .header {
+        background-color: $bg-3;
+    }
+}
+
+#main-nav .menu {
+    @include flex(center, flex-start);
+    li {
+        position: relative;
+        margin-right: 23px;
+        a {
+            @include font-16;
+            font-family: $font-main;
+            font-weight: $font-w7;
+            text-transform: uppercase;
+            position: relative;
+            display: block;
+            color: $white;
+            padding-right: 27px;
+            padding-top: 20px;
+            padding-bottom: 20px;      
+            
+            &:hover {
+                color: $color-hover;
+            }           
+        }
+        &:hover .sub-menu{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+    }
+    li.menu-item-has-children>a {
+        &::after {
+            @include transition3;
+            position: absolute;
+            font-family: "Font Awesome 5 Pro";
+            content: '\f078';
+            right: 0;
+            top: 50%;
+            font-weight: 400;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: $white;
+        }   
+            
+        &:hover::after,
+        &:hover {
+            color: $color-hover;
+        }
+    }
+
+    li.menu-item.current-menu-item > a {
+        color: $color-hover;
+        &::after {
+            color: $color-hover;
+        }
+    }
+}
+
+#main-nav2 {
+    .menu {
+        li {
+            a {
+                font-family: "Orbitron", sans-serif;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 700;
+                position: relative;
+                display: block;
+                color: #fff;
+                padding-right: 18px;
+                text-transform: capitalize;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                &:hover {
+                    color: $color-hover;
+                }
+            }
+        }
+    }
+}
+
+
+/* Header Fixed
+-------------------------------------------------------------- */
+#header_main.is-fixed {
+    @include transition5;
+    z-index: 9999;
+    opacity: 0;
+    position  : fixed;
+    top       : -100px;
+    left      : 0;
+    width     : 100%;
+    background-color: $bg-3;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), inset 0px 1px 0px #ECECEC;
+    &.is-fixed.is-small {
+        top: -1px;
+        opacity: 1;
+        visibility: visible;
+        height: 80px;
+    }
+}
+
+#header_main.main.is-fixed {
+    background-color: #190d3e;
+}
+
+.header.main.is-fixed .tf-button span.tl::before, 
+.header.main.is-fixed .tf-button span.tl::after {
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 16px solid #190d40 !important;
+}

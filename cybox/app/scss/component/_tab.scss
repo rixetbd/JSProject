@@ -1,0 +1,95 @@
+@use '../abstracts/' as *;
+
+.flat-tabs {
+    .menu-tab {
+        @include flex2();
+        flex-wrap: wrap;
+        li {
+            @include flex(center, center);
+            position: relative;
+            // margin-right: 62px;
+            margin-right: 51px;
+            margin-bottom: 12px;
+            min-height: 42px;
+            // padding: 0 18px;
+            padding: 0 23px;
+            background: transparent;
+            overflow: hidden;
+            -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -ms-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;        
+            span {
+                font-size: 20px;
+                line-height: 26px;
+                color: $txt-color;
+                font-family: $font-main;
+                font-weight: $font-w7;
+            }
+            &.active,
+            &:hover {
+                // background: $bg-gradient;
+                span{
+                    color: $white;
+                }
+            } 
+            &::after {
+                position: absolute;
+                content: "";
+                transform: rotate(-45deg);
+                top: -3px;
+                left: -15px;
+                width: 0px;
+                height: 0px;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-bottom: 15px solid $bg-main;
+                z-index: 999;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                transform: rotate(135deg);
+                bottom: -3px;
+                right: -15px;
+                width: 0px;
+                height: 0px;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-bottom: 15px solid $bg-main;
+                z-index: 999;
+            }
+            
+        }
+    }
+    .content-tab {
+        margin-top: 30px;
+        .content-inner {
+            @include flex2();
+            flex-wrap: wrap;
+            margin-left: $ml-30;
+            .post {
+                width: calc(33.33333% - 30px);
+                margin-left: 30px;
+                &.inner-post {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+    &.tab-post {
+        .menu-tab {
+            // margin: 0 -80px 0 -18px;
+            margin: 0 -86px 0 -34px;
+        }
+    }
+}
+
+.tab-post.flat-tabs .content-tab {
+    margin-top: 37px;
+}
+
+.tab-post .post.inner-post .tag {
+    height: 30px;
+}

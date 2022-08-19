@@ -1,0 +1,244 @@
+@use '../abstracts/' as *;
+/* widget
+-------------------------------------------------------------- */
+#sidebar {
+    .widget {
+        margin-bottom: 54px;
+        &.widget-recent-posts {
+            margin-bottom: 40px;
+            .widget-title {
+                padding-bottom: 8px;
+            }
+        }
+    }
+    &.toggle {
+        .widget {
+            .content-widget {
+                margin-top: 16px;
+            }
+            .widget-title {
+                margin-bottom: 0;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            &.widget-recent-posts {
+                .content-widget {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+#sidebar .widget.widget-search {
+    margin-bottom: 40px;
+}
+.widget.widget-search {
+    form {
+        position: relative;
+        button {
+            right: 20px;
+            top: 12px;
+            transform: rotate(93deg);
+            position: absolute;
+            background: none;
+            border: none;
+            i {
+                font-size: 16px;
+                color: $color-main2;
+            }
+        }
+        input {
+            @include transition3;
+            height: 52px;
+            padding: 13px 15px 13px 20px;
+            background: transparent;
+            color: $color-hover;
+            &:focus {
+                border-color: $color-hover;
+            }
+        }
+    }
+}
+
+.widget-title {
+    font-size: 24px;
+    line-height: 32px;
+    position: relative;
+    border-bottom: $boder-bt;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    &::after {
+        position: absolute;
+        @include topcenter;
+        top: 36%;
+        right: 2px;
+        content: "\f078";
+        font-family: "Font Awesome 5 Pro";
+        font-size: 13px;
+        color: $txt-color;
+        font-weight: 400;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        bottom: -1px;
+        left: 0;
+        height: 2px;
+        width: 80px;
+        background: #14C2A3;
+    }
+}
+#sidebar .widget.widget-category.st2 {
+    margin-bottom: 58px;
+}
+.widget-category {
+    &.st2 {
+        .widget-title {
+            padding-bottom: 14px;
+        }
+    }
+    ul {
+        li {
+            display: block;
+            margin-bottom: 0px;
+            a,
+            span {
+                @include transition3;
+                font-size: 17px;
+                line-height: 36px;
+                color: $white;
+                &.number {
+                    margin-left: 10px;
+                }
+            }
+            a {
+                &:hover {
+                    span {
+                        color: $color-hover;
+                    }
+                    color: $color-hover;
+                }
+            }
+        }
+    }
+}
+
+.widget-recent-posts {
+    .widget-title {
+        margin-bottom: 20px;
+    }
+    .recent-posts {
+        margin-bottom: 16px;
+        li {
+            @include flex2;
+            margin: 0;
+            img {
+                margin-right: 20px;
+                height: 100px;
+                width: 100px;
+            }
+            ul {
+                &.content {
+                    padding-top: 12px;
+                    .h8 {
+                        text-transform: capitalize;
+                        letter-spacing: 0;
+                        margin-bottom: 5px;
+                    }
+                    li {
+                        .meta-post {
+                            @include flex2;
+                            .firt {
+                                position: relative;
+                                margin-right: 7px;
+                                padding-right: 14px;
+                                span {
+                                    font-size: 12px;
+                                    line-height: 20px;
+                                    margin-right: 7px;
+                                    color: $txt-color;
+                                }
+                                &::after {
+                                    content: "|";
+                                    position: absolute;
+                                    top: -5px;
+                                    right: 0;
+                                    color: #565660;
+                                    font-size: 12px;
+                                }
+                            }
+                            li {
+                                a {
+                                    color: $white;
+                                    font-size: 12px;
+                                    line-height: 20px;
+                                    &:hover {
+                                        color: $color-hover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+               
+            }
+        }
+        
+    }
+}
+
+.widget-Tags {
+    .widget-title {
+        padding-bottom: 14px;
+    }
+    ul { 
+        @include flex2;
+        flex-wrap: wrap;
+        margin-right: -12px;
+        li {
+            @include transition3;
+            background: rgba(34, 183, 143, 0.1);
+            margin-right: 8px;
+            margin-bottom: 10px;
+            height: 30px;
+            padding: 0 12px;
+            span {
+                font-size: 12px;
+                line-height: 1.66;
+                color: $white;
+            }
+            a {
+                font-size: 12px;
+                line-height: 1.66;
+                color: $white;
+            }
+            &:hover {
+                background: $color-hover;
+            }
+        }
+    }
+}
+
+.widget-social {
+    @include flex(center,center);
+    li {
+        margin: 0 11px 0 12px;
+        a {
+            svg {
+                path {
+                    @include transition3;
+                }
+              
+            }
+            &:hover {
+                svg {
+                    path {
+                        fill: $color-hover;
+                    }
+                }
+            }
+        }
+       
+    }
+}

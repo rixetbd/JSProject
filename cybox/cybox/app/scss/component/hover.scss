@@ -1,0 +1,54 @@
+@use '../abstracts/' as *;
+.countdown__item,
+.corner-box {
+    @include transition3;
+    border: $border-width solid #105252;
+    padding: 18px 20px;
+    position: relative;
+    z-index: 1;
+    &.active,
+    &:hover {
+        &::before {
+            width: 0 !important;
+        }
+        &::after {
+            height: 0 !important; 
+        }
+        border-color: $bg-2;
+    }
+
+    &::before, &::after {
+        @include transition3;
+        content: '';
+        position: absolute;
+        background: #0e2230;
+        z-index: -1;
+    }
+    
+    &::before {
+        width: calc(102% - #{$corner-size});
+        height: calc(100% + #{$border-width * 2});
+        top: -$border-width;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &::after {
+        height: calc(110% - 3rem);
+        width: calc(100% + 4px);
+        left: -2px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &.st2 {
+        &::before {
+            width: calc(105% - #{$corner-size});
+            height: calc(100% + #{$border-width * 2});
+            top: -$border-width;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &:hover::before {
+            width: 0;
+        }
+    }
+  }
