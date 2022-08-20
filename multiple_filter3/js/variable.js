@@ -1,6 +1,6 @@
 
 const CityArr = [{
-        AustraliaCity: [" ", 'Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Gold Coast–Tweed Heads', 'Newcastle–Maitland', 'Canberra–Queanbeyan', 'Sunshine Coast', 'Central Coast', 'Wollongong', 'Geelong', 'Hobart', 'Townsville', 'Cairns', 'Toowoomba', 'Darwin', 'Ballarat', 'Bendigo', 'Albury–Wodonga', 'Launceston', 'Mackay', 'Rockhampton', 'Melton', 'Bunbury', 'Coffs Harbour', 'Bundaberg', 'Wagga Wagga', 'Hervey Bay', 'Shepparton–Mooroopna', 'Mildura–Wentworth', 'Port Macquarie', 'Gladstone–Tannum Sands', 'Tamworth', 'Traralgon–Morwell', 'Warragul–Drouin', 'Bowral–Mittagong', 'Orange', 'Busselton', 'Dubbo', 'Nowra–Bomaderry', 'Bathurst', 'Geraldton', 'Warrnambool', 'Albany'],
+        AustraliaCity: [" ", 'Adelaide','Albany','Albury–Wodonga','Ballarat','Bathurst','Bendigo','Bowral–Mittagong','Brisbane','Bunbury','Bundaberg','Busselton','Cairns','Canberra–Queanbeyan','Central Coast','Coffs Harbour','Darwin','Dubbo','Geelong','Geraldton','Gladstone–Tannum Sands','Gold Coast–Tweed Heads','Hervey Bay','Hobart','Launceston','Mackay','Melbourne','Melton','Mildura–Wentworth','Newcastle–Maitland','Nowra–Bomaderry','Orange','Perth','Port Macquarie','Rockhampton','Shepparton–Mooroopna','Sunshine Coast','Sydney','Tamworth','Toowoomba','Townsville','Traralgon–Morwell','Wagga Wagga','Warragul–Drouin','Warrnambool','Wollongong'],
     },
     {
         CanadaCity: [" ", 'Toronto', 'Montreal', 'Vancouver', 'Calgary', 'Edmonton', 'Ottawa–Gatineau', 'Winnipeg', 'Quebec City', 'Hamilton', 'Kitchener', 'London', 'Victoria', 'Halifax', 'Oshawa', 'Windsor', 'Saskatoon', 'St. Catharines - Niagara Falls', 'Regina', 'St. Johns', 'Kelowna', 'Barrie', 'Sherbrooke', 'Guelph', 'Kanata', 'Abbotsford', 'Trois-Rivières', 'Kingston', 'Milton', 'Moncton', 'White Rock', 'Nanaimo', 'Brantford', 'Chicoutimi - Jonquière', 'Saint-Jérôme', 'Red Deer', 'Thunder Bay', 'Lethbridge', 'Kamloops', 'Sudbury', 'Saint-Jean-sur-Richelieu', 'Peterborough', 'Chilliwack', 'Châteauguay', 'Belleville', 'Sarnia', 'Airdrie', 'Drummondville', 'Welland - Pelham', 'Fort McMurray', 'Prince George', 'Sault Ste. Marie', 'Fredericton', 'Saint John', 'Medicine Hat', 'Grande Prairie', 'Granby', 'Bowmanville - Newcastle', 'Beloeil', 'Charlottetown', 'Vernon', 'North Bay', 'Saint-Hyacinthe', 'Brandon', 'Joliette', 'Courtenay', 'Cornwall', 'Victoriaville', 'Woodstock', 'St. Thomas']
@@ -74,7 +74,7 @@ let flagAddress = {
     Spain: "https://flagpedia.net/data/flags/icon/256x192/es.webp",
     Sweden: "https://flagpedia.net/data/flags/icon/256x192/se.webp",
     UK: "https://flagpedia.net/data/flags/icon/256x192/gb.webp",
-    USA: "https://flagpedia.net/data/flags/icon/256x192/gb.webp",
+    USA: "https://flagpedia.net/data/flags/icon/256x192/us.webp",
 };
 
 
@@ -136,16 +136,17 @@ $('#filter').click(function () {
         showCountryName.textContent = countryName;
         showCityName.textContent = cityName;
         showIndustryName.textContent = industryName;
-        // $('#myTable_filter input').click(this);
+        
+        var randomValue = Math.floor(Math.random()*8)+1;
+        let sortingTH = document.querySelectorAll('.sorting');
+        sortingTH[randomValue].click();
+
         show_hide_column();
         var lastColCellsOnly = Array.prototype.slice.call(document.querySelectorAll('td:nth-child(8)', 'table'), 0);
         lastColCellsOnly.forEach(function (cell) { // iterate and hide
             cell.textContent = cityName;
         });
         $('#myTable_filter input').val(industryName).keyup();
-        var lastColHeader = Array.prototype.slice.call(document.querySelectorAll(`th:nth-child(${randomValue})`, 'table'), 0); // get the header cell
-        var randomValue = Math.floor(Math.random()*8)+1;
-        lastColHeader.click();
     }
 
 })
