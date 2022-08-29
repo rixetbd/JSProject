@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+
+    <!-- Required meta tags -->
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+
+    <title>Assignment </title>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="co-l-md-12">
+
+              <form action="post.html" method="POST">
+
+              <table class="table">
+
+                <thead>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Email</th>
+
+                    <th>Phone</th>
+
+                    <th>Action</th>
+
+                </thead>
+
+                <tbody class="addMoreProduct">
+
+                    <tr class="product_row">
+
+                        <td>1</td>
+
+                        <td><input type="text" name="name[]" class="form-control name"></td>
+
+                        <td><input type="email" name="price[]" class="form-control email"></td>
+
+                        <td><input type="number" class="form-control phone"></td>
+
+                        <td> 
+
+                          <button onclick="addMoreRow()" type="button" class="btn btn-info btn-sm"><i class="fa fa-plus"></i></button>
+
+                          <td><button type="button" class="btn btn-danger btn-sm delete_row"><i class="fa fa-minus"></i></button></td>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <button type="submit" class="btn btn-success btn-sm">Submit</button>
+
+          </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+  
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+   
+
+    <script>
+
+      //  Click event, when plus icon click one row will show
+
+      function addMoreRow(){
+
+        
+
+          var numberofrow = ($('.addMoreProduct tr').length - 0) +1;
+
+          var html = '<tr><td>'+numberofrow+'</td><td><input type="text" name="name[]" class="form-control name"></td><td><input type="email" name="price[]" class="form-control email"></td><td><input type="number" class="form-control phone"></td><td> <button onclick="addMoreRow()" type="button" class="btn btn-info btn-sm"><i class="fa fa-plus"></i></button></td><td><button type="button" class="btn btn-danger btn-sm delete_row"><i class="fa fa-minus"></i></button></td></tr>';
+
+          var tbody = $('.addMoreProduct').append(html);
+
+      }
+
+      // Delete the appended row
+
+      $('.addMoreProduct').delegate('.delete_row', 'click', function(){
+
+          $(this).parent().parent().remove();
+
+          var tr = $(this).parent().parent();
+
+      });
+
+     
+
+  </script>
+
+  </body>
+
+</html>
