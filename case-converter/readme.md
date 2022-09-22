@@ -10,7 +10,7 @@ This is a litte JavaScript Project.
 
 ### Live Preview
 
-Copy link from below or click here [Click Here](https://rixetbd.github.io/JSProject/Digital_Clock/index.html)
+Copy link from below or click here [Click Here](https://rixetbd.github.io/JSProject/case-converter/index.html)
 
 ```bash
   https://rixetbd.github.io/JSProject/case-converter/index.html
