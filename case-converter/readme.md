@@ -3,7 +3,7 @@
 
 
 
-## Digital Clock ⌚ DigiClock
+## Case Converter ⌚
 
 This is a litte JavaScript Project.
 
@@ -13,7 +13,7 @@ This is a litte JavaScript Project.
 Copy link from below or click here [Click Here](https://rixetbd.github.io/JSProject/Digital_Clock/index.html)
 
 ```bash
-  https://rixetbd.github.io/JSProject/Digital_Clock/index.html
+  https://rixetbd.github.io/JSProject/case-converter/index.html
 ```
 
 ### Feedback
