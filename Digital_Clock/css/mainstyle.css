@@ -13,6 +13,7 @@ body{
     display: grid;
     place-items: center;
     background: #131419;
+    align-content: center;
 }
 
 .clock{
